@@ -9,7 +9,7 @@ jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
       $.post(this.action, 
              $(this).serializeArray(), 
-             function(data) {alert(data);},
+             null,
              "script");
       return false;
       });

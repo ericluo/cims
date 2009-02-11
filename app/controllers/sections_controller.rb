@@ -7,7 +7,7 @@ class SectionsController < ApplicationController
     @section = Section.create!(params[:section])
     respond_to do |format|
       format.html
-      format.js {render :layout => false}
+      format.js 
     end
   end
 
