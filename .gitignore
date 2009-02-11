@@ -1,4 +1,6 @@
-tmp/
-log/
+tmp/**/*
+log/*.log
 db/*.sqlite3
-vendor/
+doc/api
+doc/app
+doc/plugins
