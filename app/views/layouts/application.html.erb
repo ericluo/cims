@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- START:jit -->
+<html>
+  <head>
+    <title>湖北银监局综合事件管理系统</title>
+    <!-- START:stylesheet -->
+    <%= stylesheet_link_tag "cims", "ui.all", :media => "all" %>
+    <!-- END:stylesheet -->
+    <%= javascript_include_tag "jquery", "application", "jquery.ui.all", "ui.datepicker-zh-CN" %>
+  </head>
+  <!-- END:jit -->
+  <body id="store">
+    <div id="banner">
+      <!--<%= image_tag("logo.gif") %>-->
+      <!-- START_HIGHLIGHT -->
+      <%= @page_title || "湖北银监局信息科技综合服务平台" %>
+      <!-- END_HIGHLIGHT -->
+    </div>
+    <div id="side">
+      <div>
+        <h3><a href="#">系统管理</a></h3>
+        <div>
+          <%= link_to "用户管理", sections_path %>
+         </div>
+      </div>
+      <div>
+        <h3><a href="#">设备管理</a></h3>
+        <div>
+          <%= link_to "设备入库", new_equipment_path %>
+        </div>
+      </div>
+      <div>
+        <h3><a href="#">任务管理</a></h3>
+        <div></div>
+      </div>
+      <div>
+        <h3><a href="#">分析报告</a></h3>
+        <div></div>
+      </div>
+    </div>
+    <div id="main">
+      <!-- START:flash -->
+      <% if flash[:notice] -%>
+        <div id="notice"><%= flash[:notice] %></div>
+      <% end -%>
+      <!-- END:flash -->
+
+      <%= yield :layout %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'win32console'
+require File.dirname(__FILE__) + '/../config/boot'
+require 'commands/server'

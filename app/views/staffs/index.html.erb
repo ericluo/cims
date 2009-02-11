@@ -1,0 +1,18 @@
+<h1>用户列表</h1>
+
+<table>
+  <tr><th>姓名</th><th>房间</th><th>电话</th></tr>
+
+  <% for staff in @staffs %>
+    <tr>
+      <td><%=h staff.name %></td>
+      <td><%=h staff.room %></td>
+      <td><%=h staff.phone %></td>
+      <td><%= link_to "编辑", edit_staff_path(staff) %></td>
+      <td><%= link_to "查看", staff %></td>
+      <td><%= link_to "删除", staff, :confirm => "确定吗?", :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<br/>
+<%= link_to "新增用户", new_staff_path%>

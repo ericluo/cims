@@ -1,0 +1,27 @@
+<h1>设备列表</h1>
+
+<table>
+  <tr><th>设备编号</th><th>设备类别</th><th>设备品牌</th><th>型号</th><th>购买日期</th>
+    <th>单价</th><th>使用人</th><th>操作</th><th>分配记录</th></tr>
+
+  <% for item in @equipment %>
+    <tr>
+      <td><%=h item.code %></td>
+      <td><%=h item.category.name %></td>
+      <td><%=h item.brand %></td>
+      <td><%=h item.model %></td>
+      <td><%=h item.buy_date %></td>
+      <td><%=h item.price %></td>
+      <td><%=h item.staff.name unless item.staff.nil? %></td>
+      <td>
+        <%= link_to "编辑", edit_equipment_path(item) %>
+        <%= link_to "查看", item %>
+        <%= link_to "删除", item, :confirm => "确定吗?", :method => :delete %>
+        <%= link_to "分配", new_equipment_assignment_path(item) %>
+      </td>
+      <td><%= link_to "分配历史记录", equipment_assignments_path(item) %>
+    </tr>
+  <% end %>
+</table>
+<br/>
+<%= link_to "新增设备", new_equipment_path%>

@@ -1,0 +1,934 @@
+# Logfile created on Tue Feb 10 09:41:01 +0800 2009
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 09:48:44) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 09:49:04) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 09:58:55) [GET]
+  [4;36;1mSection Load (47.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `section' for #<ActionView::Base:0x4736bf4>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(section, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(section, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (32.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:11:23) [GET]
+  [4;36;1mSection Load (16.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `section' for #<ActionView::Base:0x4718b7c>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(section, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(section, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:11:25) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `section' for #<ActionView::Base:0x47d7f54>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(section, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(section, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 10:11:46) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 10:11:47) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 10:11:48) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:12:05) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `section' for #<ActionView::Base:0x498ecf8>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(section, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(section, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:12:07) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `section' for #<ActionView::Base:0x476bed0>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(section, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(section, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:20:58) [GET]
+  [4;36;1mSection Load (15.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `owner' for #<ActionView::Base:0x47d4700>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(owner, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(owner, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:21:00) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `owner' for #<ActionView::Base:0x481bf10>) on line #7 of app/views/sections/_staff.html.erb:
+4:   <td><%= staff.room %></td>
+5:   <td><%= staff.phone %></td>
+6:   <td><%= staff.updated_at.to_date %></td>
+7:   <td><%= link_to "编辑", edit_section_staff_path(owner, staff) %>
+8:     <%= link_to "删除", 
+9:       section_staff_path(owner, staff),
+10:       :confirm => '确定吗?',
+
+    app/views/sections/_staff.html.erb:7
+    app/views/sections/_section.html.erb:10
+    app/views/sections/index.html.erb:13
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:23:52) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (16.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 1516ms (View: 1469, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SectionsController#update (for 127.0.0.1 at 2009-02-10 10:24:13) [POST]
+  Parameters: {"sequence"=>["2", "1", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '办公室' AND "sections".id <> 2) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:13', "priority" = 0 WHERE "id" = 2[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '局领导' AND "sections".id <> 1) LIMIT 1[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '政策法规处' AND "sections".id <> 3) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 2 WHERE "id" = 3[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场一处' AND "sections".id <> 4) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 3 WHERE "id" = 4[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 5) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场二处' AND "sections".id <> 5) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 4 WHERE "id" = 5[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 6) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查一处' AND "sections".id <> 6) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 5 WHERE "id" = 6[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 7) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查二处' AND "sections".id <> 7) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 6 WHERE "id" = 7[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 8) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '城市商业银行监管处' AND "sections".id <> 8) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 7 WHERE "id" = 8[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 9) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非银行机构监管处' AND "sections".id <> 9) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 8 WHERE "id" = 9[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 10) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '合作处' AND "sections".id <> 10) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 9 WHERE "id" = 10[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 11) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '外资银行和金融资产管理公司监管处' AND "sections".id <> 11) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:14', "priority" = 10 WHERE "id" = 11[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 12) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '直辖监管办协调处' AND "sections".id <> 12) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 11 WHERE "id" = 12[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 13) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '统计信息处' AND "sections".id <> 13) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 12 WHERE "id" = 13[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 14) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '财务会计处' AND "sections".id <> 14) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 13 WHERE "id" = 14[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 15) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '人事处' AND "sections".id <> 15) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 14 WHERE "id" = 15[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 16) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '监察室' AND "sections".id <> 16) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 15 WHERE "id" = 16[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 17) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关党委' AND "sections".id <> 17) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 16 WHERE "id" = 17[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 18) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关服务中心' AND "sections".id <> 18) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 17 WHERE "id" = 18[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 19) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '案件治理工作督导组' AND "sections".id <> 19) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 18 WHERE "id" = 19[0m
+  [4;36;1mSection Load (15.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 20) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '银行业协会' AND "sections".id <> 20) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 19 WHERE "id" = 20[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 21) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '其他' AND "sections".id <> 21) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:15', "priority" = 20 WHERE "id" = 21[0m
+Redirected to actionindex
+Completed in 2203ms (DB: 15) | 302 Found [http://localhost/sections/update]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:24:16) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (2,1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+Rendered sections/_section (0.0ms)
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (15.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Completed in 203ms (View: 157, DB: 0) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#update (for 127.0.0.1 at 2009-02-10 10:24:16) [POST]
+  Parameters: {"sequence"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '局领导' AND "sections".id <> 1) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:16', "priority" = 0 WHERE "id" = 1[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '办公室' AND "sections".id <> 2) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:24:16', "priority" = 1 WHERE "id" = 2[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '政策法规处' AND "sections".id <> 3) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场一处' AND "sections".id <> 4) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 5) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场二处' AND "sections".id <> 5) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 6) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查一处' AND "sections".id <> 6) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 7) [0m
+  [4;35;1mSection Exists (16.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查二处' AND "sections".id <> 7) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 8) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '城市商业银行监管处' AND "sections".id <> 8) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 9) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非银行机构监管处' AND "sections".id <> 9) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 10) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '合作处' AND "sections".id <> 10) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 11) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '外资银行和金融资产管理公司监管处' AND "sections".id <> 11) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 12) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '直辖监管办协调处' AND "sections".id <> 12) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 13) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '统计信息处' AND "sections".id <> 13) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 14) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '财务会计处' AND "sections".id <> 14) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 15) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '人事处' AND "sections".id <> 15) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 16) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '监察室' AND "sections".id <> 16) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 17) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关党委' AND "sections".id <> 17) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 18) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关服务中心' AND "sections".id <> 18) LIMIT 1[0m
+  [4;36;1mSection Load (15.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 19) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '案件治理工作督导组' AND "sections".id <> 19) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 20) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '银行业协会' AND "sections".id <> 20) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 21) [0m
+  [4;35;1mSection Exists (16.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '其他' AND "sections".id <> 21) LIMIT 1[0m
+Redirected to actionindex
+Completed in 516ms (DB: 47) | 302 Found [http://localhost/sections/update]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:24:17) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#update (for 127.0.0.1 at 2009-02-10 10:27:36) [POST]
+  Parameters: {"sequence"=>["1", "3", "4", "5", "6", "7", "2", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '局领导' AND "sections".id <> 1) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '政策法规处' AND "sections".id <> 3) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:36', "priority" = 1 WHERE "id" = 3[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场一处' AND "sections".id <> 4) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:36', "priority" = 2 WHERE "id" = 4[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 5) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场二处' AND "sections".id <> 5) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:36', "priority" = 3 WHERE "id" = 5[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 6) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查一处' AND "sections".id <> 6) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:36', "priority" = 4 WHERE "id" = 6[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 7) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查二处' AND "sections".id <> 7) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:36', "priority" = 5 WHERE "id" = 7[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '办公室' AND "sections".id <> 2) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:37', "priority" = 6 WHERE "id" = 2[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 8) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '城市商业银行监管处' AND "sections".id <> 8) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 9) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非银行机构监管处' AND "sections".id <> 9) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 10) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '合作处' AND "sections".id <> 10) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 11) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '外资银行和金融资产管理公司监管处' AND "sections".id <> 11) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 12) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '直辖监管办协调处' AND "sections".id <> 12) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 13) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '统计信息处' AND "sections".id <> 13) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 14) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '财务会计处' AND "sections".id <> 14) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 15) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '人事处' AND "sections".id <> 15) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 16) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '监察室' AND "sections".id <> 16) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 17) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关党委' AND "sections".id <> 17) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 18) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关服务中心' AND "sections".id <> 18) LIMIT 1[0m
+  [4;36;1mSection Load (16.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 19) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '案件治理工作督导组' AND "sections".id <> 19) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 20) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '银行业协会' AND "sections".id <> 20) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 21) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '其他' AND "sections".id <> 21) LIMIT 1[0m
+Redirected to actionindex
+Completed in 844ms (DB: 16) | 302 Found [http://localhost/sections/update]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:27:37) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,3,4,5,6,7,2,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (16.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (32.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (15.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 375ms (View: 157, DB: 0) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#update (for 127.0.0.1 at 2009-02-10 10:27:38) [POST]
+  Parameters: {"sequence"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '局领导' AND "sections".id <> 1) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '办公室' AND "sections".id <> 2) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:38', "priority" = 1 WHERE "id" = 2[0m
+  [4;35;1mSection Load (16.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '政策法规处' AND "sections".id <> 3) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:38', "priority" = 2 WHERE "id" = 3[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场一处' AND "sections".id <> 4) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:38', "priority" = 3 WHERE "id" = 4[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 5) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非现场二处' AND "sections".id <> 5) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:38', "priority" = 4 WHERE "id" = 5[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 6) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查一处' AND "sections".id <> 6) LIMIT 1[0m
+  [4;36;1mSection Update (0.0ms)[0m   [0;1mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:39', "priority" = 5 WHERE "id" = 6[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 7) [0m
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '现场检查二处' AND "sections".id <> 7) LIMIT 1[0m
+  [4;35;1mSection Update (0.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-02-10 02:27:39', "priority" = 6 WHERE "id" = 7[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 8) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '城市商业银行监管处' AND "sections".id <> 8) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 9) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '非银行机构监管处' AND "sections".id <> 9) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 10) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '合作处' AND "sections".id <> 10) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 11) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '外资银行和金融资产管理公司监管处' AND "sections".id <> 11) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 12) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '直辖监管办协调处' AND "sections".id <> 12) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 13) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '统计信息处' AND "sections".id <> 13) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 14) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '财务会计处' AND "sections".id <> 14) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 15) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '人事处' AND "sections".id <> 15) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 16) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '监察室' AND "sections".id <> 16) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 17) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关党委' AND "sections".id <> 17) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 18) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '机关服务中心' AND "sections".id <> 18) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 19) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '案件治理工作督导组' AND "sections".id <> 19) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 20) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '银行业协会' AND "sections".id <> 20) LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 21) [0m
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '其他' AND "sections".id <> 21) LIMIT 1[0m
+Redirected to actionindex
+Completed in 906ms (DB: 16) | 302 Found [http://localhost/sections/update]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:27:39) [GET]
+  [4;36;1mSection Load (15.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (15.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (15.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 203ms (View: 156, DB: 15) | 200 OK [http://localhost/sections]
+
+
+Processing StaffsController#new (for 127.0.0.1 at 2009-02-10 10:45:53) [GET]
+  Parameters: {"section_id"=>"2"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering staffs/new
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/sections/2/staffs/new]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:46:53) [GET]
+  [4;35;1mSection Load (15.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;36;1mStaff Load (0.0ms)[0m   [0;1mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 203ms (View: 141, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 10:47:17) [GET]
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;36;1mStaff Load (0.0ms)[0m   [0;1mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (16.0ms)
+Rendered sections/_section (32.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (15.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Completed in 188ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-02-10 10:48:21) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, index, and update):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-10 10:48:32) [GET]
+
+ActionController::RoutingError (No route matches "/section/index" with {:method=>:get}):
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 11:02:46) [GET]
+  [4;35;1mSection Load (16.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;36;1mStaff Load (0.0ms)[0m   [0;1mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (16.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (15.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 188ms (View: 141, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2009-02-10 11:02:57) [POST]
+  Parameters: {"section"=>{"name"=>"ddd"}}
+  [4;35;1mSection Exists (0.0ms)[0m   [0mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = 'ddd') LIMIT 1[0m
+  [4;36;1mSection Create (0.0ms)[0m   [0;1mINSERT INTO "sections" ("name", "updated_at", "priority", "created_at") VALUES('ddd', '2009-02-10 03:02:57', NULL, '2009-02-10 03:02:57')[0m
+Rendering sections/create
+  [4;35;1mStaff Load (16.0ms)[0m   [0mSELECT * FROM "staffs" WHERE ("staffs".section_id = 22) [0m
+Rendered sections/_section (16.0ms)
+Completed in 734ms (View: 78, DB: 16) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2009-02-10 11:03:22) [DELETE]
+  Parameters: {"id"=>"22"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 22) [0m
+  [4;35;1mSection Delete all (125.0ms)[0m   [0mDELETE FROM "sections" WHERE ("id" IN (22)) [0m
+Redirected to actionindex
+Completed in 250ms (DB: 125) | 302 Found [http://localhost/sections/22]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-02-10 11:03:22) [GET]
+  [4;36;1mSection Load (15.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY priority[0m
+  [4;35;1mStaff Load (0.0ms)[0m   [0mSELECT "staffs".* FROM "staffs" WHERE ("staffs".section_id IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)) [0m
+Rendering template within layouts/application
+Rendering sections/index
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendered sections/_staff (0.0ms)
+Rendered sections/_section (31.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (16.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Rendered sections/_section (0.0ms)
+Completed in 203ms (View: 140, DB: 15) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2009-02-10 11:03:25) [POST]
+  Parameters: {"section"=>{"name"=>""}}
+  [4;36;1mSection Exists (0.0ms)[0m   [0;1mSELECT "sections".id FROM "sections" WHERE ("sections"."name" = '') LIMIT 1[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  app/controllers/sections_controller.rb:7:in `create'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  d:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  d:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
