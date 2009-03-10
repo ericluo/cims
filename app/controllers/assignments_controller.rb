@@ -28,7 +28,7 @@ class AssignmentsController < ApplicationController
   def new
     @equipment = Equipment.find(params[:equipment_id])
     @assignment = @equipment.assignments.new
- end
+  end
 
   # GET /assignments/1/edit
   def edit
