@@ -5,9 +5,5 @@ describe "/assignments/show.html.erb" do
   before(:each) do
     assigns[:assignment] = @assignment = stub_model(Assignment)
   end
-
-  it "should render attributes in <p>" do
-    render "/assignments/show.html.erb"
-  end
 end
 

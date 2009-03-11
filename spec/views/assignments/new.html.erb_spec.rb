@@ -9,12 +9,6 @@ describe "/assignments/new.html.erb" do
     )
   end
 
-  it "should render new form" do
-    render "/assignments/new.html.erb"
-    
-    response.should have_tag("form[action=?][method=post]", assignments_path) do
-    end
-  end
 end
 
 

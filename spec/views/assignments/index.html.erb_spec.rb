@@ -10,8 +10,5 @@ describe "/assignments/index.html.erb" do
     ]
   end
 
-  it "should render list of assignments" do
-    render "/assignments/index.html.erb"
-  end
 end
 
