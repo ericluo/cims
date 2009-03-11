@@ -54,6 +54,8 @@ describe AssignmentsController do
   
     it "should expose a new assignment as @assignment" do
       Assignment.should_receive(:new).and_return(mock_assignment)
+      @equipment = mock_model(Equipment)
+      Equipment.stub!(:find).and_return(@equipment)
       get :new
       assigns[:assignment].should equal(mock_assignment)
     end
