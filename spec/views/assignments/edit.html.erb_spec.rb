@@ -8,13 +8,6 @@ describe "/assignments/edit.html.erb" do
       :new_record? => false
     )
   end
-
-  it "should render edit form" do
-    render "/assignments/edit.html.erb"
-    
-    response.should have_tag("form[action=#{assignment_path(@assignment)}][method=post]") do
-    end
-  end
 end
 
 
