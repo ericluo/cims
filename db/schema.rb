@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20090123132935) do
     t.float    "price"
     t.date     "buy_date"
     t.integer  "category_id"
-    t.integer  "staff_id"
+    t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,8 +56,7 @@ ActiveRecord::Schema.define(:version => 20090123132935) do
     t.string   "name"
     t.string   "room"
     t.string   "phone"
-    t.string   "password"
-    t.string   "pwd_confirm"
+    t.string   "encrypted_password"
     t.integer  "section_id"
     t.datetime "created_at"
     t.datetime "updated_at"

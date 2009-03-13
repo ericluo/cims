@@ -4,8 +4,8 @@ class CreateEquipment < ActiveRecord::Migration
       t.string :brand, :code, :model
       t.float :price
       t.date :buy_date
-
-      t.references :category, :staff
+      t.references :category
+      t.integer :owner_id
       t.timestamps
     end
 

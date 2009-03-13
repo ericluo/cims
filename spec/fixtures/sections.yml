@@ -1,9 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#非现场一处 非现场二处 现场检查一处 现场检查二处 城市商业银行监管处 非银行机构监管处 合作处 外资银行和金融资产管理公司监管处 直辖监管办协调处 统计信息处 财务会计处 人事处 监察室 机关党委 机关服务中心 案件治理工作督导组 银行业协会 其他}
 
-one:
-  name: MyString
+leader:
+  name: 局领导
   priority: 1
 
-two:
-  name: MyString
-  priority: 1
+office:
+  name: 办公室
+  priority: 2
+
+policy:
+  name: 政策法规处 
+  priority: 3

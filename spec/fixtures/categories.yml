@@ -1,7 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+pc:
+  name: 台式电脑
 
-two:
-  name: MyString
+notebook:
+  name: 笔记本电脑
+
+printer:
+  name: 打印机

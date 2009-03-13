@@ -5,8 +5,7 @@ class CreateStaffs < ActiveRecord::Migration
       t.string :name
       t.string :room
       t.string :phone
-      t.string :password
-      t.string :pwd_confirm
+      t.string :encrypted_password
 
       t.references :section 
       t.timestamps
