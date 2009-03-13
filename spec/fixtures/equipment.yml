@@ -1,11 +1,18 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#
 
 one:
-  name: MyString
-  buy_date: 2009-01-10
-  price: 1.5
+  code: 3000000001
+  brand: Lenovo
+  model: X61
+  price: 17500
+  buy_date: <%= Date.today %>
+  category: notebook
 
 two:
-  name: MyString
-  buy_date: 2009-01-10
-  price: 1.5
+  code: 3000000002
+  brand: Lenovo
+  model: 6681
+  price: 5500
+  buy_date: <%= Date.today %>
+  category: pc

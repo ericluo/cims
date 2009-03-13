@@ -12,7 +12,7 @@
       <td><%=h item.model %></td>
       <td><%=h item.buy_date %></td>
       <td><%=h item.price %></td>
-      <td><%=h item.staff.name unless item.staff.nil? %></td>
+      <td><%=h item.owner.name unless item.owner.nil? %></td>
       <td>
         <%= link_to "查看", item %>
         <%= link_to "删除", item, :confirm => "确定吗?", :method => :delete %>

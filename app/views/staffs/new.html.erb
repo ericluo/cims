@@ -6,7 +6,9 @@
 
   <div class="row">
     <span class="label"><%= f.label "处室" %></span>
-    <span class="data"><%= f.text_field :name, :value => @section.name, :disabled => true %></span>
+    <span class="data">
+      <%= f.collection_select :section_id, Section.all, :id, :name, \
+                            {}, {:disabled => true} %></span>
   </div>
   <div class="row">
     <span class="label"><%= f.label "登录名" %></span>

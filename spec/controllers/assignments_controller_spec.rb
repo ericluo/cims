@@ -5,5 +5,4 @@ describe AssignmentsController do
   def mock_assignment(stubs={})
     @mock_assignment ||= mock_model(Assignment, stubs)
   end
-  
 end
