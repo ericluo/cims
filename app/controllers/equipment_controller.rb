@@ -1,6 +1,6 @@
 class EquipmentController < ApplicationController
   def index
-    @equipment = Equipment.find(:all)
+    @equipment = Equipment.all
   end
 
   def edit

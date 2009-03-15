@@ -2,26 +2,37 @@ class StaffsController < ApplicationController
   before_filter :find_section
 
   def edit
+    @staff = Staff.find(params[:id])
   end
 
   def show
-    @staff = @section.staffs.find(params[:id])
+    @staff = Staff.find(params[:id])
   end
 
   def create
-    @staff = @section.staffs.new(params[:staff])
+    @staff = Staff.new(params[:staff])
     if @staff.save
       flash[:notice] = "用户注册成功！"
-      redirect_to([@section, @staff])
+      redirect_to(sections_path)
     else
       render :action => "new"
     end
   end
 
   def update
+    @staff = Staff.find(params[:id])
+    if @staff.update_attributes(params[:staff])
+      flash[:notice] = "用户修改成功"
+      redirect_to(sections_path)
+    else
+      render :action => "edit"
+    end
   end
 
-  def destory
+  def destroy
+    @staff = Staff.find(params[:id])
+    @staff.destroy
+    redirect_to(sections_path)
   end
 
   def new
