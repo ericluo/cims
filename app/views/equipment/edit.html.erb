@@ -1,0 +1,50 @@
+<h1>湖北银监局电子设备列表</h1>
+
+<div style="background-color: #cc9; border: 1px; padding: 5px; margin: 0px auto;">
+<% form_for @equipment do |f| %>
+  <%= f.error_messages %>
+
+  <div class="row">
+    <span class="label"><%= f.label "设备编号" %></span>
+    <span class="data"><%= f.text_field :code, :value => @equipment.code, :disabled => true %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "设备类别" %></span>
+    <span class="data"><%= f.collection_select :category_id, Category.all, :id, :name %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "设备品牌" %></span>
+    <span class="data"><%= f.text_field :brand %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "设备型号" %> </span>
+    <span class="data"><%= f.text_field :model %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "采购日期" %></span>
+    <span class="data"><%= f.text_field :buy_date %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "价格" %></span>
+    <span class="data"><%= f.text_field :price %></span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "使用部门" %></span>
+    <span class="data">
+      <%= collection_select :owner, :section_id, Section.all, :id, :name, :include_blank => true %>
+    </span>
+  </div>
+  <div class="row">
+    <span class="label"><%= f.label "使用人" %></span>
+    <span class="data">
+      <%= f.collection_select :owner_id, @candicates, :id, :name, :include_blank => true %>
+    </span>
+  </div>
+
+  <div class="row">
+    <%= f.submit "保存" %>
+    <%= link_to "返回", equipment_index_path %>
+  </p>
+
+<% end %>
+</div>
