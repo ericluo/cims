@@ -45,5 +45,9 @@ $(function(){
        $.post("/sections/update", {"sequence[]" : priorities});
       } //end the update block
     });
+
+    $("assignment").click(function() {
+      $.get("sections/index", {}, function(data) {alert(data)})
+      });
 });
 

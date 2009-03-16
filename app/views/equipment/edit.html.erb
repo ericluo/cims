@@ -28,18 +28,6 @@
     <span class="label"><%= f.label "价格" %></span>
     <span class="data"><%= f.text_field :price %></span>
   </div>
-  <div class="row">
-    <span class="label"><%= f.label "使用部门" %></span>
-    <span class="data">
-      <%= collection_select :owner, :section_id, Section.all, :id, :name, :include_blank => true %>
-    </span>
-  </div>
-  <div class="row">
-    <span class="label"><%= f.label "使用人" %></span>
-    <span class="data">
-      <%= f.collection_select :owner_id, @candicates, :id, :name, :include_blank => true %>
-    </span>
-  </div>
 
   <div class="row">
     <%= f.submit "保存" %>

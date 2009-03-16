@@ -1,6 +1,4 @@
 class AssignmentsController < ApplicationController
-
-
   # GET /assignments
   # GET /assignments.xml
   def index

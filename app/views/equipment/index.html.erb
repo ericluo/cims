@@ -2,7 +2,7 @@
 
 <table>
   <tr><th>设备编号</th><th>设备类别</th><th>设备品牌</th><th>型号</th><th>购买日期</th>
-    <th>单价</th><th>使用人</th><th>操作</th><th>分配记录</th></tr>
+    <th>单价</th><th>使用人</th><th>操作</th><th>设备分配</th></tr>
 
   <% for item in @equipment %>
     <tr>
@@ -18,7 +18,7 @@
         <%= link_to "查看", item %>
         <%= link_to "删除", item, :confirm => "确定吗?", :method => :delete %>
       </td>
-      <td><%= link_to "分配历史记录", equipment_assignments_path(item) %>
+        <td><button type="button" id="assignment">分配</button</td>
     </tr>
   <% end %>
 </table>
