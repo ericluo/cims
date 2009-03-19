@@ -5,7 +5,10 @@ describe Staff do
     @valid_attributes = {
       :name => "value for name",
       :room => "value for room",
-      :phone => "value for phone"
+      :phone => "value for phone",
+      :account => "eric",
+      :password => "ssf",
+      :password_confim => "ddd"
     }
   end
 
