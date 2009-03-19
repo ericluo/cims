@@ -3,6 +3,10 @@ class EquipmentController < ApplicationController
     @equipment = Equipment.all
   end
 
+  def new
+    @equipment = Equipment.new
+  end
+
   def edit
     @equipment = Equipment.find(params[:id])
     @owner = @equipment.owner
