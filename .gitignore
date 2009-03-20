@@ -1,5 +1,5 @@
 tmp/**/*
-tmp/tags
+tmp/*
 log/*.log
 db/*.sqlite3
 doc/api
