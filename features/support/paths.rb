@@ -3,10 +3,7 @@ def path_to(page_name)
   
   when /the homepage/i
     root_path
-  when /equipment/i
-    equipment_index_path
-  when /equipment\/new/i
-    new_equipment_path
+  
   # Add more page name => path mappings here
   
   else
