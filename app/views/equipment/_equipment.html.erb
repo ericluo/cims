@@ -2,27 +2,27 @@
   <%= f.error_messages %>
 
   <div class="row">
-    <span class="label"><%= f.label "设备编号", :for => "equipment_code" %></span>
+    <span class="label"><%= f.label :code, "设备编号" %></span>
     <span class="data"><%= f.text_field :code, :value => @equipment.code %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label "设备类别" %></span>
+    <span class="label"><%= f.label :category_id, "设备类别" %></span>
     <span class="data"><%= f.collection_select :category_id, Category.all, :id, :name %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label "设备品牌" %></span>
+    <span class="label"><%= f.label :brand, "设备品牌" %></span>
     <span class="data"><%= f.text_field :brand %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label "设备型号" %> </span>
+    <span class="label"><%= f.label :model, "设备型号" %> </span>
     <span class="data"><%= f.text_field :model %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label "采购日期" %></span>
+    <span class="label"><%= f.label :buy_date, "采购日期" %></span>
     <span class="data"><%= f.text_field :buy_date %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label "价格" %></span>
+    <span class="label"><%= f.label :price, "价格" %></span>
     <span class="data"><%= f.text_field :price %></span>
   </div>
 
