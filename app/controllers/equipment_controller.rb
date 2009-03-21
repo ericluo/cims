@@ -5,6 +5,7 @@ class EquipmentController < ApplicationController
 
   def new
     @equipment = Equipment.new
+    @categories = Category.all
   end
 
   def edit

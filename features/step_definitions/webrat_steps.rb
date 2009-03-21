@@ -20,7 +20,6 @@ When /^I fill in "(.*)" with "(.*)"$/ do |field, value|
 end
 
 When /^I select "(.*)" from "(.*)"$/ do |value, field|
-  debugger
   select(value, :from => field) 
 end
 

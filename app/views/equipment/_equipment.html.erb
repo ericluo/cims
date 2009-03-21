@@ -7,7 +7,7 @@
   </div>
   <div class="row">
     <span class="label"><%= f.label :category_id, "设备类别" %></span>
-    <span class="data"><%= f.collection_select :category_id, Category.all, :id, :name %></span>
+    <span class="data"><%= f.collection_select :category_id, @categories, :id, :name %></span>
   </div>
   <div class="row">
     <span class="label"><%= f.label :brand, "设备品牌" %></span>
