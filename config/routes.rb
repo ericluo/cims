@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories
   map.resources :equipment, :has_many => :assignments
   map.resources :assignments
+  map.resources :purchases
 
   # The priority is based upon order of creation: first created -> highest priority.
 
