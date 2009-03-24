@@ -14,13 +14,12 @@
       <td><%=h item.price %></td>
       <td><%=h item.owner.name unless item.owner.nil? %></td>
       <td>
-        <%= link_to "编辑", edit_equipment_path(item) %>
-        <%= link_to "查看", item %>
-        <%= link_to "删除", item, :confirm => "确定吗?", :method => :delete %>
+        <%= link_to "编辑", edit_equipment_instance_path(item) %>
+        <%= link_to "删除", equipment_instance_path(item), :confirm => "确定吗?", :method => :delete %>
       </td>
         <td><button type="button" id="assignment">分配</button</td>
     </tr>
   <% end %>
 </table>
 <br/>
-<%= link_to "新增设备", new_equipment_path%>
+<%= link_to "新增设备", new_equipment_instance_path%>

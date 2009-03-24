@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :staffs
   map.resources :sections, :has_many => :staffs
   map.resources :categories
-  map.resources :equipment, :has_many => :assignments
+  map.resources :equipment, :has_many => :assignments, :singular => :equipment_instance
   map.resources :assignments
   map.resources :purchases
 

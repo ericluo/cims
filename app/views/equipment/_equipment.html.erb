@@ -1,13 +1,13 @@
-<% form_for @equipment, :url => new_equipment_url do |f| %>
-  <%= f.error_messages %>
+<% form_for @equipment do |f| %>
 
   <div class="row">
     <span class="label"><%= f.label :code, "设备编号" %></span>
-    <span class="data"><%= f.text_field :code, :value => @equipment.code %></span>
+    <span class="data"><%= f.text_field :code, :value => @equipment.code -%></span>
+    <span class="error"><%= f.error_message_on :code -%></span>
   </div>
   <div class="row">
     <span class="label"><%= f.label :category_id, "设备类别" %></span>
-    <span class="data"><%= f.collection_select :category_id, @categories, :id, :name %></span>
+    <span class="data"><%= f.collection_select :category_id, Category.all, :id, :name %></span>
   </div>
   <div class="row">
     <span class="label"><%= f.label :brand, "设备品牌" %></span>
@@ -22,13 +22,12 @@
     <span class="data"><%= f.text_field :buy_date %></span>
   </div>
   <div class="row">
-    <span class="label"><%= f.label :price, "价格" %></span>
+    <span class="label"><%= f.label :price, "采购价格" %></span>
     <span class="data"><%= f.text_field :price %></span>
   </div>
 
-  <div class="row">
+  <div style="align: right">
     <%= f.submit "保存" %>
-    <%= link_to "返回", equipment_index_path %>
-    </p>
-
-  <% end %>
+    <%= link_to "返回", equipment_path %>
+  </div>
+<% end %>

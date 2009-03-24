@@ -5,7 +5,16 @@ class EquipmentController < ApplicationController
 
   def new
     @equipment = Equipment.new
-    @categories = Category.all
+  end
+
+  def create
+    @equipment = Equipment.new(params[:equipment])
+    if @equipment.save
+      flash[:notice] = "新增设备成功"
+      redirect_to equipment_path
+    else
+      render :action => "new"
+    end
   end
 
   def edit
@@ -22,5 +31,11 @@ class EquipmentController < ApplicationController
     else
       render :action => "edit"
     end
+  end
+
+  def destroy
+    @equipment = Equipment.find(params[:id])
+    @equipment.destroy
+    redirect_to equipment_url
   end
 end
