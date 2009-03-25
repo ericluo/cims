@@ -3,6 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Equipment do
   before(:each) do
     @valid_attributes = {
+      :code => "3000000010",
       :brand => "Lenovo",
       :model => "X61",
       :buy_date => Date.today,

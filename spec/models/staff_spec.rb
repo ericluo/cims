@@ -8,7 +8,7 @@ describe Staff do
       :phone => "value for phone",
       :account => "eric",
       :password => "ssf",
-      :password_confim => "ddd"
+      :password_confirm => "ssf"
     }
   end
 

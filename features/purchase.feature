@@ -3,7 +3,8 @@ Feature: 管理设备采购信息
   等信息。
 
   Scenario: 浏览及查询设备采购情况
-    Given I am on the homepage page
+    Given that I have created a purchase ""
+    When I go to purchase
     When I follow "采购管理"
     Then I should see "新增采购"
 
