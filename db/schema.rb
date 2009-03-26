@@ -9,16 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090123132935) do
+ActiveRecord::Schema.define(:version => 20090326063635) do
 
   create_table "assignments", :force => true do |t|
-    t.date     "assign_date"
-    t.string   "comment"
-    t.integer  "owner_id"
-    t.integer  "assigned_by_id"
-    t.integer  "equipment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date    "start_date"
+    t.date    "end_date"
+    t.string  "comment"
+    t.integer "owner_id"
+    t.integer "assigned_by_id"
+    t.integer "equipment_id"
   end
 
   create_table "categories", :force => true do |t|
@@ -44,6 +43,13 @@ ActiveRecord::Schema.define(:version => 20090123132935) do
     t.datetime "updated_at"
   end
 
+  create_table "purchases", :force => true do |t|
+    t.date    "buy_date"
+    t.integer "buyer_id"
+    t.integer "supplier_id"
+    t.text    "comment"
+  end
+
   create_table "sections", :force => true do |t|
     t.string   "name"
     t.integer  "priority"
@@ -60,6 +66,13 @@ ActiveRecord::Schema.define(:version => 20090123132935) do
     t.integer  "section_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "suppliers", :force => true do |t|
+    t.string "company"
+    t.string "boss"
+    t.string "address"
+    t.string "phone"
   end
 
 end
