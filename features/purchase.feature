@@ -4,10 +4,10 @@ Feature: 管理设备采购信息
   需要进行采购信息CRUD操作
 
   Scenario: 浏览及查询设备采购情况
-    Given a purchase existed by "刘波" with the following items on "2008/3/3" from "佳维":
+    Given a purchase existed by "刘波" on "2008/3/3" from "佳维":
       | code       | quantity | 
       | 3000000001 | 50       | 
-    When I go to purchase
+    When I go to purchases
     When I follow "采购管理"
     Then I should see "新增采购"
 

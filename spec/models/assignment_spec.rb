@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Assignment do
   before(:each) do
     @valid_attributes = {
-      :assign_date => Date.today,
+      :start_date => Date.today,
       :comment => ""
     }
   end

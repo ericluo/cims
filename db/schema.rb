@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(:version => 20090326063635) do
   end
 
   create_table "purchases", :force => true do |t|
-    t.date    "buy_date"
-    t.integer "buyer_id"
-    t.integer "supplier_id"
-    t.text    "comment"
+    t.date   "buy_date"
+    t.string "buyer"
+    t.string "supplier"
+    t.text   "comment"
   end
 
   create_table "sections", :force => true do |t|
