@@ -2,12 +2,12 @@
 
 one:
   buy_date: 2009-03-26
-  buyer_id: 1
-  supplier_id: 1
+  buyer: &liubo
+  supplier: &jiawei
   comment: MyText
 
 two:
   buy_date: 2009-03-26
-  buyer_id: 1
-  supplier_id: 1
+  buyer: &liubo
+  supplier: &jiawei
   comment: MyText

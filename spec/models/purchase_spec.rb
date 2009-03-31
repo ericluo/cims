@@ -6,7 +6,6 @@ describe Purchase do
       :buy_date => Date.today,
       :buyer_id => 1,
       :supplier_id => 1,
-      :amount => 1.5,
       :comment => "value for comment"
     }
   end

@@ -1,5 +1,8 @@
 Given /^a purchase existed by "(.*)" with the following items on "(.*)" from "(.*)":$/ do |buyer, buy_date, supplier, items|
-  buyer_id = Staff.find_by_name(buyer).id
-  supplier_id = Supplier.find_by_company(supplier).id
-  Purchase.create!(:buy_date => buy_date, :buyer_id => buyer_id, :supplier_id => supplier_id)
+  @purchase = Purchase.new do |p|
+    p.buy_date = buy_date
+    p.buyer = Staff.find_by_name(buyer)
+    p.supplier = Supplier.find_by_name(supplier)
+  end
+  @purchase.create!
 end
