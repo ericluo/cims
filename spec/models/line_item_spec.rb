@@ -1,14 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe Assignment do
+describe LineItem do
   before(:each) do
     @valid_attributes = {
-      :start_date => Date.today,
-      :comment => ""
+      :quanlity => 1,
+      :product_id => 1
     }
   end
 
   it "should create a new instance given valid attributes" do
-    Assignment.create!(@valid_attributes)
+    LineItem.create!(@valid_attributes)
   end
 end

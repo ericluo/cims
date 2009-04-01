@@ -1,0 +1,15 @@
+<h1>采购信息</h1>
+<table>
+  <tr><th>采购时间</th><th>经办人</th><th>供货单位</th><th>备注</th></tr> 
+
+  <% for p in @purchases -%>
+    <tr>
+      <td><%= h p.buy_date %></td> 
+      <td><%= h p.buyer %></td>
+      <td><%= h p.supplier %></td>
+      <td><%= h p.comment %></td>
+    </tr>
+  <% end -%>
+</table>
+
+<%= link_to "新增采购", new_purchase_path %>

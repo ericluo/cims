@@ -1,6 +1,6 @@
 class Equipment < ActiveRecord::Base
   validates_presence_of :code, :message => "设备编码不能为空"
-  belongs_to :category
+  belongs_to :category, :include => true
   has_many   :assignments
 
   def owner
