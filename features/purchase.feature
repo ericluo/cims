@@ -14,5 +14,11 @@ Feature: 管理设备采购信息
   Scenario: 新建设备采购信息
     Given I am on the purchases page
     When I follow "新增采购"
-    Then I should see "采购信息录入"
+      And I fill in "采购日期" with "2009-3-31"
+      And I fill in "经办人" with "罗文波"
+      And I fill in "供货单位" with "佳维科技"
+      And I press "保存"
+    Then I should see "新增采购信息成功"
+      And I should see "罗文波"
+
 
