@@ -1,39 +1,32 @@
-<h1>采购信息录入</h1>
-
 <% form_for @purchase do |f| %>
 
-  <div class="row">
-    <span class="label"><%= f.label :buy_date, "采购日期" %></span>
-    <span class="data"><%= f.text_field :buy_date %></span>
-    <span class="error"><%= f.error_message_on :buy_date -%></span>
-  </div>
-  <div class="row">
-    <span class="label"><%= f.label :buyer, "经办人" %></span>
-    <span class="data"><%= f.text_field :buyer %></span>
-  </div>
-  <div class="row">
-    <span class="label"><%= f.label :supplier, "供货单位" %></span>
-    <span class="data"><%= f.text_field :supplier %></span>
-  </div>
-  <div class="row">
-    <span class="label"><%= f.label :comment, "备注信息" %> </span>
-    <span class="data"><%= f.text_field :comment %></span>
-  </div>
+  <fieldset>
+    <legend>采购基本信息</legend>
+    <ol>
+      <li>
+      <%= f.label :buy_date, "采购日期" %>
+      <%= f.text_field :buy_date %>
+      </li>
+      <li>
+      <%= f.label :buyer, "经办人" %>
+      <%= f.text_field :buyer %>
+      </li>
+      <li>
+      <%= f.label :supplier, "供货单位" %>
+      <%= f.text_field :supplier %>
+      </li>
+      <li>
+      <%= f.label :comment, "备注信息" %>
+      <%= f.text_area :comment, :rows => 5 %>
+      </li>
+    </ol>
 
-  <div id="line_items">
-    <% f.fields_for :line_items do |items_form| -%>
-      <div class="line_item">
-        <%= items_form.label :product_id, "设备名称" %> 
-        <%= items_form.collection_select :product_id, Product.all, :id, :name %>
+    <div id="line_items"></div>
+  </fieldset>
 
-        <%= items_form.label :quanlity, "设备数量" %>
-        <%= items_form.text_field :quanlity %>
-      </div>
-    <% end -%>
-  </div>
-  <%= link_to "添加采购设备" %> 
-  <div style="align: right">
-    <%= f.submit "保存" %>
-    <%= link_to "返回", purchases_path %>
-  </div>
+  <%= render :partial => 'lineitems/lineitem' %>
+
+  <fieldset class="submit">
+    <input class="submit" type="submit" value="保存" />
+  </fieldset>
 <% end %>

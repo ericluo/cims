@@ -1,0 +1,16 @@
+<fieldset>
+  <ol>
+    <li>
+      <label for="product">设备名称</label>
+      <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name) %>
+      <select id="brand" name="brand" type="select"/>
+      <select id="mode" name="mode" type="select"/>
+    </li>
+    <li>
+      <label for="quantity">采购数量</label>
+      <input id="quantity" name="quantity" type="input"/>
+      <a href="#">增加</a>
+    </li>
+  </ol>
+</fieldset>
+

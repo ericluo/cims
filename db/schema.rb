@@ -12,13 +12,12 @@
 ActiveRecord::Schema.define(:version => 20090401075638) do
 
   create_table "assignments", :force => true do |t|
-    t.date     "assign_date"
-    t.string   "comment"
-    t.integer  "owner_id"
-    t.integer  "assigned_by_id"
-    t.integer  "equipment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date    "start_date"
+    t.date    "end_date"
+    t.string  "comment"
+    t.integer "owner_id"
+    t.integer "assigned_by_id"
+    t.integer "equipment_id"
   end
 
   create_table "categories", :force => true do |t|
