@@ -3,7 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Product do
   before(:each) do
     @valid_attributes = {
-      :name => "value for name",
       :brand => "value for brand",
       :mode => "value for mode",
       :category_id => 1,

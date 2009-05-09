@@ -51,10 +51,9 @@ ActiveRecord::Schema.define(:version => 20090401075638) do
   end
 
   create_table "products", :force => true do |t|
-    t.string  "name"
+    t.integer "category_id"
     t.string  "brand"
     t.string  "mode"
-    t.integer "category_id"
     t.string  "detail"
   end
 
@@ -84,7 +83,7 @@ ActiveRecord::Schema.define(:version => 20090401075638) do
   end
 
   create_table "suppliers", :force => true do |t|
-    t.string "company"
+    t.string "name"
     t.string "boss"
     t.string "address"
     t.string "phone"

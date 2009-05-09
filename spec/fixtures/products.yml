@@ -4,12 +4,10 @@ one:
   name: MyString
   brand: MyString
   mode: MyString
-  category_id: 1
   detail: MyString
 
 two:
   name: MyString
   brand: MyString
   mode: MyString
-  category_id: 1
   detail: MyString
