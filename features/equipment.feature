@@ -1,6 +1,9 @@
 Feature: Maitain the equipment
   CRUD the equipment
 
+  Background:
+    Given a category named "打印机"
+
   Scenario: Create new equipment
     Given I am on the equipment page
     When I follow "新增设备"

@@ -1,7 +1,7 @@
 class CreateSuppliers < ActiveRecord::Migration
   def self.up
     create_table :suppliers do |t|
-      t.string :company
+      t.string :name
       t.string :boss
       t.string :address
       t.string :phone
