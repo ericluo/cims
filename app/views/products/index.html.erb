@@ -1,0 +1,15 @@
+<h1>产品列表</h1>
+
+<table>
+  <tr><th>产品类别</th><th>品牌</th><th>型号</th><th>明细</th></tr>
+
+  <% @products.each do |p| -%>
+    <tr>
+      <td><%= h p.category.name %></td>
+      <td><%= h p.brand %></td>
+      <td><%= h p.mode %></td>
+      <td><%= h p.detail %></td>
+    </tr>
+  <% end -%>
+</table>
+<%= link_to "新增产品", new_product_path %>

@@ -5,12 +5,13 @@ Feature: 管理设备采购信息
 
   Background:
     Given a supplier named "佳维科技"
+      And a category named "PC"
     #  And a staff named "罗文波"
 
   Scenario: 浏览及查询设备采购情况
     Given a purchase by "刘波" on "2008/3/3" from "佳维" with items
       | category   | brand | mode | quanlity | 
-      | computer   | IBM   | X61  | 50       | 
+      | PC         | IBM   | X61  | 50       | 
       And I am on the purchases page
     When I follow "采购管理"
     Then I should see "新增采购"

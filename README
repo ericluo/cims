@@ -1,0 +1,4 @@
+TODO:
+  增加集中的Resource管理界面，应该包括有Category, Supplier等。
+  类似于Gmail的管理窗口的样式, 在选择下拉菜单中增加一项来对资源
+  进行管理。
