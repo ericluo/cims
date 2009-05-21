@@ -11,7 +11,7 @@ Feature: 管理设备采购信息
   Scenario: 浏览及查询设备采购情况
     Given a purchase by "刘波" on "2008/3/3" from "佳维" with items
       | category   | brand | mode | quanlity | 
-      | computer   | IBM   | X61  | 50       | 
+      | PC         | IBM   | X61  | 50       | 
       And I am on the purchases page
     When I follow "采购管理"
     Then I should see "新增采购"

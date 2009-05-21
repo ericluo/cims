@@ -4,7 +4,7 @@ describe EquipmentController do
 
   #Delete these examples and add some real ones
   it "should use EquipmentController" do
-    controller.should_not be_an_instance_of(EquipmentController)
+    controller.should be_an_instance_of(EquipmentController)
   end
 
   describe "GET 'index'" do
