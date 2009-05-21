@@ -5,6 +5,7 @@ Feature: 管理设备采购信息
 
   Background:
     Given a supplier named "佳维科技"
+      And a category named "台式电脑"
     #  And a staff named "罗文波"
 
   Scenario: 浏览及查询设备采购情况

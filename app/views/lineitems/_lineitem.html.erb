@@ -3,12 +3,12 @@
     <li>
       <label for="product">设备名称</label>
       <%= collection_select "product", "category_id", Category.all, :id, :name,\
-                                   {:prompt => "请选择设备类别"} %>
-      <%= collection_select "product", "brand", [], :prompt => "请选择设备品牌" %>
+        {:prompt => "请选择设备类别"} %>
+      <select id="brand" name="brand" type="select"/>
       <select id="mode" name="mode" type="select"/>
       <label for="quantity">采购数量</label>
       <input id="quantity" name="quantity" type="input"/>
-      <a href="#">增加</a>
+      <%=link_to "购买", new_line_item_path %>
     </li>
   </ol>
 </fieldset>
