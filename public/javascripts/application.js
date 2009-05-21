@@ -25,7 +25,8 @@ $(function(){
       buttonImage: 'images/calendar.gif',
       buttonImageOnly: true
       });
-    $('#side').accordion({header: "h3"});
+
+    $('#navtab').tabs();
 
     //
     $("table tr:nth-child(even)").addClass("even");
