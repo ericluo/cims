@@ -5,7 +5,7 @@
 
   <% @products.each do |p| -%>
     <tr>
-      <td><%= h p.category.name %></td>
+      <td><%= h p.try(:category).try(:name) %></td>
       <td><%= h p.brand %></td>
       <td><%= h p.mode %></td>
       <td><%= h p.detail %></td>

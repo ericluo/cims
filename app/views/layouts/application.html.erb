@@ -5,9 +5,10 @@
   <head>
     <title>湖北银监局综合事件管理系统</title>
     <!-- START:stylesheet -->
-    <%= stylesheet_link_tag "cims", "ui.all", :media => "all" %>
+    <%= stylesheet_link_tag "cims", "jqueryslidemenu", "ui.all", :media => "all" %>
     <!-- END:stylesheet -->
-    <%= javascript_include_tag "jquery", "application", "jquery.ui.all", "ui.datepicker-zh-CN" %>
+    <%= javascript_include_tag "jquery-1.3.2", "jqueryslidemenu",
+                               "application", "jquery-ui-1.7.1.custom" %>
   </head>
   <!-- END:jit -->
   <body id="store">
@@ -17,29 +18,13 @@
       <%= @page_title || "湖北银监局信息科技综合服务平台" %>
       <!-- END_HIGHLIGHT -->
     </div>
-    <div id="side">
-      <div>
-        <h3><a href="#">系统管理</a></h3>
-        <div>
-          <%= link_to "用户管理", sections_path %>
-        </div>
-      </div>
-      <div>
-        <h3><a href="#">设备管理</a></h3>
-        <div>
-          <%= link_to "产品管理", products_path %>
-          <%= link_to "设备入库", equipment_path %><br/>
-          <%= link_to "采购管理", purchases_path %>
-        </div>
-      </div>
-      <div>
-        <h3><a href="#">任务管理</a></h3>
-        <div></div>
-      </div>
-      <div>
-        <h3><a href="#">分析报告</a></h3>
-        <div></div>
-      </div>
+    <div id="myslidemenu" class="jqueryslidemenu">
+      <ul>
+        <li><%= link_to "用户管理", sections_path %></li>  
+        <li><%= link_to "产品管理", products_path %></li>
+        <li><%= link_to "设备入库", equipment_path %></li>
+        <li><%= link_to "采购管理", purchases_path %></li>
+      </ul>
     </div>
     <div id="main">
       <!-- START:flash -->

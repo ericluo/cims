@@ -2,10 +2,21 @@
   <ol>
     <li>
       <label for="product">设备名称</label>
+<<<<<<< HEAD:app/views/lineitems/_lineitem.html.erb
       <%= collection_select "product", "category_id", Category.all, :id, :name,\
         {:prompt => "请选择设备类别"} %>
       <select id="brand" name="brand" type="select"/>
       <select id="mode" name="mode" type="select"/>
+=======
+      <%= collection_select "category", "category_id", Category.all, :id, :name,\
+                                   {:prompt => "请选择设备类别"} %>
+      <select id="product_brand" name="product[brand]">
+        <option value="">请选择设备品牌</option> 
+      </select>
+      <select id="product_mode" name="product[mode]">
+        <option value="">请选择设备型号</option>
+      </select>
+>>>>>>> 805183a8dd0d154133c6adb58013a467a54eca80:app/views/lineitems/_lineitem.html.erb
       <label for="quantity">采购数量</label>
       <input id="quantity" name="quantity" type="input"/>
       <%=link_to "购买", new_line_item_path %>
