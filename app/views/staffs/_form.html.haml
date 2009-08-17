@@ -1,0 +1,44 @@
+- form_for([@section, @staff]) do |f|
+= f.error_messages
+.row
+  %span.label
+    = f.label "处室"
+  %span.data
+    = f.collection_select :section_id, Section.all, :id, :name, \ {}, {:disabled => true}
+.row
+  %span.label
+    = f.label "登录名"
+  %span.data
+    = f.text_field :account
+.row
+  %span.label
+    = f.label "中文名"
+  %span.data
+    = f.text_field :name
+- if @staff.new_record?
+.row
+  %span.label
+    = f.label "密码"
+  %span.data
+    = f.password_field :password
+.row
+  %span.label
+    = f.label "确认密码"
+  %span.data
+    = f.password_field :password_confirm
+- end
+.row
+  %span.label
+    = f.label "房间号"
+  %span.data
+    = f.text_field :room
+.row
+  %span.label
+    = f.label "电话"
+  %span.data
+    = f.text_field :phone
+.row
+  = f.submit "保存"
+  = link_to "返回", sections_path
+  </p>
+  - end

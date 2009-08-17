@@ -1,3 +1,4 @@
+# encoding: utf-8
 class SectionsController < ApplicationController
   def index
     @sections = Section.find(:all, :include => :staffs, :order => "priority")

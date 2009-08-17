@@ -1,0 +1,32 @@
+%h1
+  设备分配历史记录
+%table
+  %tr
+    %th
+      序号
+    %th
+      分配日期
+    %th
+      使用人
+    %th
+      分配人
+    %th
+      备注信息
+    %th
+      操作
+  - @assignments.each do |assignment|
+    %tr
+      %td
+        = h assignment.id
+      %td
+        = h assignment.assign_date
+      %td
+        = h assignment.owner.id
+      %td
+        = h assignment.assigner.id
+      %td
+        = h assignment.comment
+      %td
+        = link_to 'Show', assignment
+        = link_to 'Edit', edit_assignment_path(assignment)
+        = link_to 'Destroy', assignment, :confirm => 'Are you sure?', :method => :delete

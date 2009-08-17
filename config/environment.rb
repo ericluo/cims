@@ -27,6 +27,8 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
+  config.gem 'haml'
+  config.gem 'chriseppstein-compass', :lib => 'compass'
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -74,3 +76,5 @@ Rails::Initializer.run do |config|
 
   #ActionView::Base.field_error_proc = Proc.new {|html_tag, instance| "#{html_tag}"}
 end
+
+Haml::Template.options[:encoding] = "utf-8"

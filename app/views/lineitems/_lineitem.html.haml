@@ -1,0 +1,12 @@
+%fieldset
+  %ol
+    %li
+      %label{ :for => "product" } 设备名称
+      = collection_select "category", "category_id", Category.all, :id, :name, {:prompt => "请选择设备类别"}
+      %select#product_brand{ :name => "product[brand]" }
+        %option{ :value => "" } 请选择设备品牌
+      %select#product_mode{ :name => "product[mode]" }
+        %option{ :value => "" } 请选择设备型号
+      %label{ :for => "quantity" } 采购数量
+      %input#quantity{ :name => "quantity", :type => "input" }
+      = link_to "购买", new_line_item_path

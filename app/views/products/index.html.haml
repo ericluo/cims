@@ -1,0 +1,23 @@
+%h1
+  产品列表
+%table
+  %tr
+    %th
+      产品类别
+    %th
+      品牌
+    %th
+      型号
+    %th
+      明细
+  - @products.each do |p|
+    %tr
+      %td
+        = h p.try(:category).try(:name)
+      %td
+        = h p.brand
+      %td
+        = h p.mode
+      %td
+        = h p.detail
+= link_to "新增产品", new_product_path

@@ -1,0 +1,23 @@
+%h1
+  采购信息
+%table
+  %tr
+    %th
+      采购时间
+    %th
+      经办人
+    %th
+      供货单位
+    %th
+      备注
+  - @purchases.each do |p|
+    %tr
+      %td
+        = h p.buy_date
+      %td
+        = h p.buyer
+      %td
+        = h p.supplier
+      %td
+        = h p.comment
+= link_to "新增采购", new_purchase_path

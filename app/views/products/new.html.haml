@@ -1,0 +1,22 @@
+%h1
+  添加新产品
+- form_for @product do |f|
+  %fieldset
+    %legend
+      产品信息
+    %ol
+      %li
+        = label :category, :name, "产品类别"
+        = collection_select(:category, :name, Category.all, :id, :name, {:prompt => "请选择产品类别"})
+        = link_to "增加产品类别", new_category_path
+      %li
+        = f.label :brand, "品牌"
+        = f.text_field :brand
+      %li
+        = f.label :mode, "型号"
+        = f.text_field :mode
+      %li
+        = f.label :detail, "明细"
+        = f.text_area :detail
+  %fieldset.submit
+    %input.submit{ :type => "submit", :value => "\xE4\xBF\x9D\xE5\xAD\x98" }

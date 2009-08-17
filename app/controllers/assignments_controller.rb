@@ -1,3 +1,4 @@
+# encoding: utf-8
 class AssignmentsController < ApplicationController
   # GET /assignments
   # GET /assignments.xml

@@ -1,0 +1,27 @@
+%h1
+  设备分配
+%div{ :style => "background-color: #cc9; border: 1px; padding: 5px; margin: 0px auto;" }
+  - form_for([@equipment, @assignment]) do |f|
+    = f.error_messages
+    .row
+      %span.label
+        = f.label "分配日期:"
+      %span.data
+        = f.text_field :assign_date
+    .row
+      %span.label
+        = f.label "使用部门:"
+      %span.data
+        = collection_select :staff, :section_id, Section.all, :id, :name, :include_blank => true
+    .row
+      %span.label
+        = f.label "使 用 人:"
+      %span.data
+        = f.select :owner_id,[]
+    .row
+      %span.label
+        = f.label "备注信息:"
+      %span.data
+        = f.text_area :comment
+    .row
+      = f.submit "Create"

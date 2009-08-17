@@ -1,0 +1,7 @@
+$("#new_section").reset;
+$("#section-list").append("
+= escape_javascript(render(:partial => @section))
+");
+$('
+= "#section_#{@section.id}"
+').effect("highlight", {}, "slow");

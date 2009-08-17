@@ -1,3 +1,4 @@
+# encoding: utf-8
 class EquipmentController < ApplicationController
   def index
     @equipment = Equipment.all

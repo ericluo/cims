@@ -1,0 +1,22 @@
+- form_for @purchase do |f|
+  %fieldset
+    %legend
+      采购基本信息
+    %ol
+      %li
+        = f.label :buy_date, "采购日期"
+        = f.text_field :buy_date
+      %li
+        = f.label :buyer, "经办人"
+        = f.text_field :buyer
+      %li
+        = label :supplier, :name, "供货单位"
+        = collection_select(:supplier, :name, Supplier.all, :id, :name, {:prompt => "请选择供货单位"})
+        = link_to "添加供货单位", new_supplier_path
+      %li
+        = f.label :comment, "备注信息"
+        = f.text_area :comment, :rows => 5
+    #line_items
+    = render :partial => 'lineitems/lineitem'
+  %fieldset.submit
+    %input.submit{ :type => "submit", :value => "确定" }
