@@ -1,3 +1,4 @@
+app/**/.sass-cache/*
 tmp/**/*
 tmp/*
 log/*.log
