@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20090401075638) do
 
   create_table "sections", :force => true do |t|
     t.string   "name"
-    t.integer  "priority"
+    t.integer  "priority",   :default => 999
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,7 +2,7 @@ class CreateSections < ActiveRecord::Migration
   def self.up
     create_table :sections do |t|
       t.string :name
-      t.integer :priority
+      t.integer :priority, default: 999
 
       t.timestamps
     end

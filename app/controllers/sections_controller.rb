@@ -5,11 +5,15 @@ class SectionsController < ApplicationController
   end
 
   def create
-    @section = Section.create!(params[:section])
-    flash[:notice] = "添加部门成功!"
+    @section = Section.create(params[:section])
+    if @section.save
+      flash[:notice] = "添加部门成功!"
+    else
+      flash[:notice] = "部门名称重复!"
+    end
     respond_to do |format|
-      format.html{ redirect_to @sections }
-      format.js 
+      format.html
+      format.js
     end
   end
 

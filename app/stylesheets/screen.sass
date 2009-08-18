@@ -12,6 +12,23 @@
 
 // override the image location.
 +blueprint-debug("images/grid.png")
+=form-layout
+  +blueprint-form-layout
+  label
+    +column(2)
+    margin: 0.5em 0
+    padding: 5px
+    text-align: right
+  input
+    &[type=password]
+      margin: 0.5em 0
+      padding: 5px
+  select
+    padding: 5px
+form
+  +form-layout
+
+  
 //Recommended Blueprint configuration with scoping and semantic layout:
 // +blueprint-typography("body.bp")
 // +blueprint-scaffolding("body.bp")
@@ -54,3 +71,4 @@ h1,h2,h3
   margin: 2em 0
   background-color: #f0f0f0
   font: bold sans-serif
+
