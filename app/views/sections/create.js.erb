@@ -1,0 +1,4 @@
+$('#notice').remove();
+$('#new_section').before("<div id='notice'><%= escape_javascript(flash.delete(:notice)) %></div>");
+$('#section-list').append("<%= escape_javascript(render(@section)) %>");
+$('#new_section')[0].reset();

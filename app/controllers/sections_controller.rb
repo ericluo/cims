@@ -6,8 +6,9 @@ class SectionsController < ApplicationController
 
   def create
     @section = Section.create!(params[:section])
+    flash[:notice] = "添加部门成功!"
     respond_to do |format|
-      format.html
+      format.html{ redirect_to @sections }
       format.js 
     end
   end
@@ -15,6 +16,7 @@ class SectionsController < ApplicationController
   def destroy
     @section = Section.find(params[:id])
     @section.delete
+    flash[:notice] = "删除部门成功!"
     redirect_to :action => :index
   end
 

@@ -7,7 +7,7 @@ jQuery.ajaxSetup({
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
-      $.post(this.action, 
+      $.post($(this).action, 
              $(this).serializeArray(), 
              null,
              "script");

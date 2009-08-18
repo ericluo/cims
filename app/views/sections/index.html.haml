@@ -1,5 +1,3 @@
-%h1
-  湖北银监局各部门基本信息
 %div
   - form_for Section.new do |f|
     /
@@ -8,5 +6,7 @@
     = f.text_field :name
     = f.submit "确定"
 %hr
+%h3
+  湖北银监局各部门基本信息
 #section-list
   = render :partial => 'section', :collection => @sections
