@@ -27,6 +27,8 @@ $(function(){
       });
 
     $('#navtab').tabs();
+    $('#section-list').accordion({header: 'div.section-header',
+                                  active: 0});
 
     //
     $("table tr:nth-child(even)").addClass("even");
