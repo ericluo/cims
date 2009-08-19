@@ -1,14 +1,8 @@
 %tr
-  %td
-    = staff.account
-  %td
-    = staff.name
-  %td
-    = staff.room
-  %td
-    = staff.phone
-  %td
-    = staff.updated_at.to_date
+  %td= staff.name
+  %td= staff.account
+  %td= staff.room
+  %td= staff.phone
   %td
     = link_to "编辑", edit_section_staff_path(staff.section, staff)
     = link_to "删除",  section_staff_path(staff.section, staff), :confirm => '确定吗?', :method => :delete

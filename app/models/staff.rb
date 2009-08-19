@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 class Staff < ActiveRecord::Base
 
   attr_accessor :password, :password_confirm
