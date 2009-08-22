@@ -5,5 +5,9 @@
     = f.submit "确定"
 %hr
 %h3 湖北银监局各部门基本信息
-#section-list
+.toggle-section-detail.span-19.last
+  %a{href: "#"} 展开
+  |
+  %a{href: "#"} 折叠
+#section-list.span-19.last
   = render :partial => 'section', :collection => @sections

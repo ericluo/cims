@@ -12,7 +12,7 @@ class SectionsController < ApplicationController
       flash[:notice] = "部门名称重复!"
     end
     respond_to do |format|
-      format.html
+      format.html { redirect_to "index" }
       format.js
     end
   end

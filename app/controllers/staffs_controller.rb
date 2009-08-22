@@ -11,8 +11,8 @@ class StaffsController < ApplicationController
   end
 
   def create
-    @staff = Staff.new(params[:staff])
-    logger.info(@staff.to_s)
+    @section = Section.find(params[:section_id])
+    @staff = @section.staffs.build(params[:staff])
     if @staff.save
       flash[:notice] = "用户注册成功！"
       redirect_to(sections_path)

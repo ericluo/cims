@@ -24,22 +24,24 @@ $(function(){
       changeYear:  true,
       buttonImage: 'images/calendar.gif',
       buttonImageOnly: true
-      });
+    });
 
     $('#navtab').tabs();
-    $('#section-list').accordion({header: 'div.section-header',
-                                  active: 0});
+    $('#section-list').accordion({
+      header: 'div.section-header',
+      collapsible: true,
+    });
 
     //
     $("table tr:nth-child(even)").addClass("even");
 
-    $("#new_section").submitWithAjax();
+    // $("#new_section").submitWithAjax();
 
     // make the section-list sortable and save the list's state
     $("#section-list").sortable({
       update: function(event, ui){
         priorities = [];
-       $("#section-list > div").each(function(n) {
+       $("#section-list > li").each(function(n) {
          section_id = this.id.split("_")[1];
          //result.merge(section_id : n + 1);
          priorities[n] = section_id;
