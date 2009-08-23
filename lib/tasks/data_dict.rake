@@ -10,5 +10,10 @@ namespace :data do
 财务会计处 人事处 监察室 机关党委 机关服务中心 案件治理督导组 银行业协会 其他}.each_with_index do|n, i|
       Section.create!(name: n, priority: i)
     end
+
+    IssueStatuses.delete_all
+    %w{new open complete reopen}.each {|s| IssueStatus.create!(name: s)}
+    IssuePriorities.delete_all
+    %w{high medium low}.each {|p| IssuePriority.create!(name: p)}
   end
 end

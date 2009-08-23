@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :issues
+
   map.resources :staffs
   map.resources :suppliers
   map.resources :sections, :has_many => :staffs

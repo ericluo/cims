@@ -6,14 +6,14 @@
 @import blueprint
 // Import the non-default scaffolding module.
 // @import blueprint/modules/scaffolding.sass
-
+@import buttons.sass
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 +blueprint
 
 // override the image location.
-+blueprint-debug("images/grid.png")
+// +blueprint-debug("images/grid.png")
 =form-layout
-  +blueprint-form-layout
+  +blueprint-form
   label
     +column(2)
     margin: 0.5em 0
@@ -25,10 +25,21 @@
       padding: 5px
   select
     padding: 5px
+    width:   250px
+  .action
+    +prepend(2)
+
+form.inline
+  +blueprint-form
+  +blueprint-inline-form
 form
   +form-layout
 
-  
+// a
+  // +anchor-button("right")
+  // +button-colors
+  // +button-hover-colors
+  // +button-active-colors
 //Recommended Blueprint configuration with scoping and semantic layout:
 // +blueprint-typography("body.bp")
 // +blueprint-scaffolding("body.bp")

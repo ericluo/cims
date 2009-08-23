@@ -5,8 +5,11 @@ class Staff < ActiveRecord::Base
   attr_accessor :password, :password_confirm
 
   validates_presence_of :account, :name, :password, :password_confirm
+  validates_uniqueness_of :account
+
   belongs_to :section
   has_many   :equipment, :through => :assignments
+  has_many   :issues
 
   validate do |staff|
     staff.password_match
