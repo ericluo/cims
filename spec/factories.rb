@@ -1,11 +1,11 @@
 # encoding: utf-8
 
 Factory.define :issue_status do |f|
-  f.name "new"
+  f.name CIMS::Issue::STATUSES.rand
 end
 
 Factory.define :issue_priority do |f|
-  f.name "high"
+  f.name CIMS::Issue::PRIORITIES.rand
 end
 
 Factory.define :section do |f|

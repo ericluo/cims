@@ -10,8 +10,8 @@ namespace :db do
     # end
 
     statuses, priorities, staffs = [],[],[]
-    %w{new open complete reopen}.each {|s| statuses << Factory(:issue_status, name: s)}
-    %w{high medium low}.each {|p| priorities << Factory(:issue_priority, name: p)}
+    CIMS::Issue::STATUSES.each {|s| statuses << Factory(:issue_status, name: s)}
+    CIMS::Issue::PRIORITIES.each {|p| priorities << Factory(:issue_priority, name: p)}
     10.times { staffs << Factory(:staff) } 
 
     5.times { Factory(:issue, status: statuses.rand, 
