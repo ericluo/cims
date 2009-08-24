@@ -1,17 +1,29 @@
 # encoding: utf-8
 
+Factory.define :issue_status do |f|
+  f.name "new"
+end
+
+Factory.define :issue_priority do |f|
+  f.name "high"
+end
+
 Factory.define :section do |f|
   f.sequence :name do |n| 
     "section#{n}"
   end
-  f.priority "1"
+  f.sequence :priority do |n|
+    n
+  end
 end
 
 Factory.define :staff do |f|
   f.sequence :account do |n| 
     "account#{n}" 
   end
-  f.name "罗文波"
+  f.sequence :name do |n|
+    "name#{n}"
+  end
   f.room "310"
   f.phone "85565025"
   f.password "secret"
@@ -26,4 +38,6 @@ Factory.define :issue do |f|
 
   f.association :applicant, factory: :staff
   f.association :author, factory: :staff
+  f.association :status, factory: :issue_status
+  f.association :priority, factory: :issue_priority
 end

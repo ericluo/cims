@@ -29,6 +29,11 @@ Rails::Initializer.run do |config|
 
   config.gem 'haml'
   config.gem 'chriseppstein-compass', :lib => 'compass'
+  # depends on factory_girl when test & development mode, development mode for seed data 
+  unless ENV['RAILS_ENV'] == 'production'
+    config.gem "thoughtbot-factory_girl", lib: "factory_girl", source: "http://gems.github.com"
+  end
+
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
