@@ -27,7 +27,7 @@ class StaffsController < ApplicationController
       flash[:notice] = "用户修改成功"
       redirect_to(sections_path)
     else
-      render :action => "edit"
+      render :edit
     end
   end
 

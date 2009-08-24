@@ -7,11 +7,13 @@
 // Import the non-default scaffolding module.
 // @import blueprint/modules/scaffolding.sass
 @import buttons.sass
+
+@import cims.sass
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
 +blueprint
 
 // override the image location.
-// +blueprint-debug("images/grid.png")
++blueprint-debug("images/grid.png")
 =form-layout
   +blueprint-form
   label
@@ -80,10 +82,31 @@ body
 
 h1,h2,h3
   text-align: center
+  border-bottom: 3px #77d
+
 #notice
   border: 2px solid red
   padding: 1em
   margin: 2em 0
   background-color: #f0f0f0
-  font: bold sans-serif
+  font: bold smaller sans-serif
+
+#banner
+  background: #9c9
+  padding-top: 10px
+  padding-bottom: 10px
+  border-bottom: 2px solid
+  font: small-caps 40px/40px "Times New Roman", serif
+  color: #282
+  text-align: center
+  img
+    float: left
+
+.even
+  background-color: #292
+
+
+table
+  width: 100%
+  text-align: center
 

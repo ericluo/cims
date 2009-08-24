@@ -4,7 +4,8 @@ class Staff < ActiveRecord::Base
 
   attr_accessor :password, :password_confirm
 
-  validates_presence_of :account, :name, :password, :password_confirm
+  # validates_presence_of :account, :name, :password_confirm, message: "不能为空"
+  validates_presence_of :password, message: "密码不能为空"
   validates_uniqueness_of :account
 
   belongs_to :section
