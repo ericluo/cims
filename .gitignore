@@ -1,4 +1,5 @@
 app/**/.sass-cache/*
+public/stylesheets/compiled/*
 tmp/**/*
 tmp/*
 log/*.log
