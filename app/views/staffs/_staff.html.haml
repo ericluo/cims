@@ -1,5 +1,5 @@
 - form_for([@section, @staff]) do |f|
-  = f.error_messages header_message: "以下输入信息错误，请重新输入", message: nil 
+  = f.error_messages
   = f.label "处室"
   = f.collection_select :section_id, Section.all, :id, :name, {}
   %br

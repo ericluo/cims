@@ -1,0 +1,19 @@
+zh:
+  activerecord:
+    errors:
+      template:
+        header : "保存失败，请修改如下输入信息"
+        body   : "以下输入信息有误"
+      messages:
+        blank: "不能为空"
+    models:
+      staff: "员工"
+    attributes:
+      staff:
+        account         : "登录名"
+        name            : "中文名"
+        room            : "房间号"
+        phone           : "电话"
+        password        : '密码'
+        password_confirm: "密码确认"
+
