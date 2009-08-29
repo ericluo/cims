@@ -34,6 +34,9 @@ Rails::Initializer.run do |config|
     config.gem "thoughtbot-factory_girl", lib: "factory_girl", source: "http://gems.github.com"
   end
 
+  # config.middleware.insert_before "ActionController::ParamsParser", "EncodingHack"
+
+  config.middleware.insert_before "Rack::Lock", "EncodingHack"
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
