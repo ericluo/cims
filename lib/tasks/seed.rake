@@ -12,6 +12,7 @@ namespace :db do
     statuses, priorities, staffs = [],[],[]
     CIMS::Issue::STATUSES.each {|s| statuses << Factory(:issue_status, name: s)}
     CIMS::Issue::PRIORITIES.each {|p| priorities << Factory(:issue_priority, name: p)}
+    CIMS::Product::CATEGORIES.each {|c| Factory(:product_category, name: c)}
     10.times { staffs << Factory(:staff) } 
 
     5.times { Factory(:issue, status: statuses.rand, 

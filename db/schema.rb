@@ -20,10 +20,6 @@ ActiveRecord::Schema.define(:version => 20090823145845) do
     t.integer "equipment_id"
   end
 
-  create_table "categories", :force => true do |t|
-    t.string "name"
-  end
-
   create_table "departments", :force => true do |t|
     t.string   "name"
     t.string   "address"
@@ -67,6 +63,10 @@ ActiveRecord::Schema.define(:version => 20090823145845) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "product_categories", :force => true do |t|
+    t.string "name"
   end
 
   create_table "products", :force => true do |t|

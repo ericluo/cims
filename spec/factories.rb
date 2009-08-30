@@ -8,6 +8,10 @@ Factory.define :issue_priority do |f|
   f.name CIMS::Issue::PRIORITIES.rand
 end
 
+Factory.define :product_category  do |f|
+  f.name CIMS::Product::CATEGORIES.rand
+end
+
 Factory.define :section do |f|
   f.sequence :name do |n| 
     "section#{n}"
