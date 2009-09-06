@@ -5,7 +5,7 @@ Feature: 管理设备采购信息
 
   Background:
     Given a supplier named "佳维科技"
-      And a category named "台式电脑"
+      And a product_category named "台式电脑"
     #  And a staff named "罗文波"
 
   Scenario: 浏览及查询设备采购情况
@@ -21,7 +21,7 @@ Feature: 管理设备采购信息
     When I fill in "采购日期" with "2009-3-31"
       And I fill in "经办人" with "罗文波"
       And I select "佳维科技" from "供货单位" 
-      And I press "保存"
+      And I press "确定"
     Then I should see "新增采购信息成功"
       And I should see "罗文波"
 

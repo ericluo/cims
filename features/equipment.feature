@@ -2,7 +2,7 @@ Feature: Maitain the equipment
   CRUD the equipment
 
   Background:
-    Given a category named "打印机"
+    Given a product_category named "打印机"
 
   Scenario: Create new equipment
     Given I am on the equipment page
@@ -18,3 +18,4 @@ Feature: Maitain the equipment
     And I fill in "采购日期" with "2009-3-20"
     And I fill in "采购价格" with "5000.0"
     And I press "保存"
+    Then I should see "新增设备"

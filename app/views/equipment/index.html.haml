@@ -2,30 +2,21 @@
   设备列表
 %table
   %tr
-    %th
-      设备编号
-    %th
-      设备类别
-    %th
-      设备品牌
-    %th
-      型号
-    %th
-      购买日期
-    %th
-      单价
-    %th
-      使用人
-    %th
-      操作
-    %th
-      设备分配
+    %th 设备编号
+    %th 设备类别
+    %th 设备品牌
+    %th 型号
+    %th 购买日期
+    %th 单价
+    %th 使用人
+    %th 操作
+    %th 设备分配
   - @equipment.each do |item|
     %tr
       %td
         = h item.code
       %td
-        = h item.try(:category).try(:name)
+        = h item.try(:product_category).try(:name)
       %td
         = h item.brand
       %td
