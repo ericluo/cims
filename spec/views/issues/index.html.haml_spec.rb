@@ -4,10 +4,7 @@ describe "/issues/index.html.haml" do
   include IssuesHelper
 
   before(:each) do
-    assigns[:issues] = [
-      stub_model(Issue),
-      stub_model(Issue)
-    ]
+    assigns[:issues] = @issues = [Factory.create(:issue)]
   end
 
   it "renders a list of issues" do

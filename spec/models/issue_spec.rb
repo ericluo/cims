@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Issue do
+
   before(:each) do
     @issue = Factory(:issue)
   end
@@ -11,4 +12,7 @@ describe Issue do
     }.should raise_error
   end
 
+  it "should have valid category" do
+    CIMS::Issue::CATEGORIES.should include(@issue.category.name)
+  end
 end
