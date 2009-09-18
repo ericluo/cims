@@ -1,7 +1,7 @@
 %fieldset
   %legend 采购设备明细
   %label{ :for => "product" } 设备名称
-  = collection_select "category", "category_id", Category.all, :id, :name, {:prompt => "请选择设备类别"}
+  = collection_select "category", "category_id", ProductCategory.all, :id, :name, {:prompt => "请选择设备类别"}
   %select#product_brand{ :name => "product[brand]" }
     %option{ :value => "" } 请选择设备品牌
   %select#product_mode{ :name => "product[mode]" }

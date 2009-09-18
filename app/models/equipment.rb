@@ -1,7 +1,7 @@
 # encoding: utf-8
 class Equipment < ActiveRecord::Base
   validates_presence_of :code, :message => "设备编码不能为空"
-  belongs_to :category, :include => true
+  belongs_to :product_category, :include => true
   has_many   :assignments
 
   def owner

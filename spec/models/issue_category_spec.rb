@@ -1,10 +1,13 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe ProductCategory do
+describe IssueCategory do
   before(:each) do
-    product_category = Factory(:product_category)
+    @valid_attributes = {
+      
+    }
   end
 
   it "should create a new instance given valid attributes" do
+    IssueCategory.create!(@valid_attributes)
   end
 end

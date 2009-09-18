@@ -9,13 +9,13 @@ namespace :db do
       # Section.create!(name: n, priority: i)
     # end
 
-    statuses, priorities, staffs = [],[],[]
+    statuses, priorities, categories, staffs = [],[],[],[]
     CIMS::Issue::STATUSES.each {|s| statuses << Factory(:issue_status, name: s)}
     CIMS::Issue::PRIORITIES.each {|p| priorities << Factory(:issue_priority, name: p)}
-    10.times { staffs << Factory(:staff) } 
+    CIMS::Issue::CATEGORIES.each {|c| categories << Factory(:issue_category, name: c)}
+    CIMS::Product::CATEGORIES.each {|c| Factory(:product_category, name: c)}
 
-    5.times { Factory(:issue, status: statuses.rand, 
-                      priority: priorities.rand, author: staffs.rand,
-                      applicant: staffs.rand) }
+    10.times { staffs << Factory(:staff) } 
+    5.times { Factory(:issue) }
   end
 end

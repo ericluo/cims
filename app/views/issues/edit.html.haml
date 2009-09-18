@@ -1,22 +1,21 @@
 %h3 修改任务
 - form_for(@issue) do |f|
   = f.error_messages
-  %br
+  %div
   = f.label "任务"
   = f.text_field :subject
-  %br
+  %div
   = f.label "备注"
   = f.text_area :description
-  %br
+  %div
   = f.label "状态"
   = f.collection_select :status_id, IssueStatus.all, :id, :name
-  %br
+  %div
   = f.label "优先级"
   = f.collection_select :priority_id, IssuePriority.all, :id, :name
-  %br
+  %div
   = f.label "申请人"
   = f.collection_select :applicant_id, Staff.all, :id, :name
-  %br
   .action
     = f.submit '确定' 
-    = f.submit '取消'
+    %input(type="reset" value="取消")

@@ -7,8 +7,10 @@ class CreateIssues < ActiveRecord::Migration
 
       t.integer :status_id
       t.integer :priority_id
+      t.integer :category_id
       t.integer :author_id
       t.integer :applicant_id
+
       t.timestamps
     end
   end
