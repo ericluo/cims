@@ -1,15 +1,17 @@
-%h3 问题列表
+%h3 任务列表
 
 %table
   %tr
     %th 任务名称
     %th 任务明细
     %th 申请者
+    %th 状态
   - @issues.each do |issue|
     %tr
       %td= issue.subject
       %td= issue.description
       %td= issue.try(:applicant).try(:name)
+      %td= issue.status.name
       %td 
         = link_to 'Edit', edit_issue_path(issue)
         = link_to 'Destroy', issue, :confirm => 'Are you sure?', :method => :delete

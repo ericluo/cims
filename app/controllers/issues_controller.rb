@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.xml
@@ -44,7 +46,7 @@ class IssuesController < ApplicationController
 
     respond_to do |format|
       if @issue.save
-        flash[:notice] = 'Issue was successfully created.'
+        flash[:notice] = '任务新建成功'
         format.html { redirect_to(issues_url) }
         format.xml  { render :xml => @issue, :status => :created, :location => @issue }
       else
