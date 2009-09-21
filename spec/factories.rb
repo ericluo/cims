@@ -1,5 +1,12 @@
 # encoding: utf-8
 
+Factory.define :supplier do |f|
+  f.name "lenovo"
+  f.boss "yang"
+  f.address "beijing"
+  f.phone "86"
+end
+
 Factory.define :issue_status do |f|
   f.name CIMS::Issue::STATUSES.rand
 end

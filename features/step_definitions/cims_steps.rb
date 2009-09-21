@@ -1,6 +1,5 @@
-Given /^a (.*) named "(.*)"/ do |object, name|
-  klass = object.camelize.constantize
-  klass.create!(:name => name)
+Given /^a (.*) named "(.*)"$/ do |obj, name|
+  Factory.create(obj, name: name)
 end
 
 Given /^a purchase by "(.*)" on "(.*)" from "(.*)" with items$/ do |b, date, s, items|

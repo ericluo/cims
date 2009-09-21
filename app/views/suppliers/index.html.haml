@@ -1,0 +1,21 @@
+%h3 供应商列表
+
+%table
+  %thead
+    %tr
+      %th 供应商名称
+      %th 法人代表
+      %th 地址
+      %th 联系电话
+  %tbody
+    - @suppliers.each do |supplier|
+      %tr
+        %td= supplier.name
+        %td= supplier.boss
+        %td= supplier.address
+        %td= supplier.phone
+        %td
+          = link_to '编辑', edit_supplier_path(supplier)
+          = link_to '删除', supplier, :confirm => '确定删除吗?', :method => :delete
+
+= link_to '新增供应商', new_supplier_path
