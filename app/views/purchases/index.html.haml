@@ -2,22 +2,18 @@
   采购信息
 %table
   %tr
-    %th
-      采购时间
-    %th
-      经办人
-    %th
-      供货单位
-    %th
-      备注
+    %th 采购时间
+    %th 经办人
+    %th 供货单位
+    %th 备注
   - @purchases.each do |p|
     %tr
+      %td= h p.buy_date
+      %td= h p.buyer
+      %td= h p.supplier
+      %td= h p.comment
       %td
-        = h p.buy_date
-      %td
-        = h p.buyer
-      %td
-        = h p.supplier
-      %td
-        = h p.comment
+        = link_to '编辑', edit_purchase_path(p)
+        = link_to '明细', purchase_line_items_path(p)
+        = link_to '删除', p, :confirm => '确定删除吗？', :method => :delete
 = link_to "新增采购", new_purchase_path

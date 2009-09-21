@@ -6,8 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sections, :has_many => :staffs
   map.resources :categories
   map.resources :equipment, :has_many => :assignments, :singular => :equipment_instance
-  map.resources :purchases
-  map.resources :line_items
+  map.resources :purchases, :has_many => :line_items
   map.resources :products
   map.resources :issues
 
@@ -43,7 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "sections"
+  map.root :controller => "issues"
 
   # See how all your routes lay out with "rake routes"
 
