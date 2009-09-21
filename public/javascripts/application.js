@@ -32,6 +32,8 @@ $(function(){
       collapsible: true,
     });
 
+    $('table').dataTable();
+
     //
     $("table tr:nth-child(even)").addClass("even");
 

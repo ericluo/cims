@@ -5,9 +5,12 @@
     %meta{'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8"}
     = stylesheet_link_tag "jqueryslidemenu", :media => "all"
     = stylesheet_link_tag "jquery-ui-1.7.2.custom", :media => "all"
+    = stylesheet_link_tag "demo_table_jui"
     = stylesheet_link_tag "compiled/screen", "compiled/link_icons", "compiled/buttons", :media => "all"
 
-    = javascript_include_tag "jquery-1.3.2.min", "jqueryslidemenu", "application", "jquery-ui-1.7.2.custom.min"
+    = javascript_include_tag "jquery-1.3.2.min",  "jquery-ui-1.7.2.custom.min"
+    = javascript_include_tag "jquery.dataTables", "jqueryslidemenu"
+    = javascript_include_tag "application"
   %body.showgrid.container
     #header
       %h1= @page_title || "湖北银监局信息科技综合服务平台"

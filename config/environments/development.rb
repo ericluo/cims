@@ -17,3 +17,5 @@ config.action_controller.perform_caching             = false
 config.action_mailer.raise_delivery_errors = false
 
 config.action_view.debug_rjs = true
+
+config.gem "thoughtbot-factory_girl", lib: "factory_girl", source: "http://gems.github.com"

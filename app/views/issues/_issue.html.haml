@@ -1,15 +1,20 @@
 - form_for(issue) do |f|
   = f.error_messages
-  %br
-  = f.label "任务"
-  = f.text_field :subject
-  %br
-  = f.label "备注"
-  = f.text_area :description
-  %br
-  = f.label "申请人"
-  = f.collection_select :applicant_id, Staff.all, :id, :name
-  %br
+  %div
+    = f.label "任务"
+    = f.text_field :subject
+  %div
+    = f.label "类别"
+    = f.collection_select :category_id, IssueCategory.all, :id, :name
+  %div
+    = f.label "备注"
+    = f.text_area :description
+  %div
+    = f.label "申请人"
+    = f.collection_select :applicant_id, Staff.all, :id, :name
+  %div
+    = f.label "优先级"
+    = f.collection_select :priority_id, IssuePriority.all, :id, :name
   .action
     = f.submit '确定' 
     = f.submit '取消'
