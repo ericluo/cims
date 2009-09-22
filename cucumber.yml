@@ -1,2 +1,2 @@
-default: --format progress -P features
+default: --drb --port 8990 
 html_report: --format progress --format html --out=features_report.html features

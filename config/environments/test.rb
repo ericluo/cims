@@ -21,9 +21,6 @@ config.action_controller.allow_forgery_protection    = false
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
 
-ENV['AUTOFEATURE'] = "true"
-ENV['RSPEC'] ="true"
-
 config.gem "rspec", :lib  => false
 config.gem "rspec-rails", :lib => false
 config.gem "cucumber"
