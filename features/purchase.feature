@@ -25,5 +25,3 @@ Feature: 管理设备采购信息
       And I press "确定"
     Then I should see "新增采购信息成功"
       And I should see "罗文波"
-
-
