@@ -5,7 +5,9 @@ class EquipmentController < ApplicationController
   end
 
   def new
+    @title = "新增电子设备"
     @equipment = Equipment.new
+    render 'equipment'
   end
 
   def create
@@ -19,9 +21,11 @@ class EquipmentController < ApplicationController
   end
 
   def edit
+    @title = "修改电子设备信息"
     @equipment = Equipment.find(params[:id])
     @owner = @equipment.owner
     @candicates = @owner.nil? ? [] : Staff.find_by_section_id(@owner.section_id)
+    render 'equipment'
   end
 
   def update

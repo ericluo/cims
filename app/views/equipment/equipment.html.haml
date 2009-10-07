@@ -1,0 +1,10 @@
+- semantic_form_for @equipment do |f|
+  - f.inputs :name => @title do
+    = f.input :code, :value => @equipment.code
+    = f.input :category
+    = f.input :brand
+    = f.input :model
+    = f.input :buy_date, :as => :string
+    = f.input :price
+  - f.buttons do
+    = f.commit_button "保存"

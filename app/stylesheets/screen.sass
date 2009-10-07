@@ -2,6 +2,7 @@
 // @import blueprint/reset.sass
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base.sass
+@import partials/formtastic_base.sass
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
 // Import the non-default scaffolding module.
@@ -18,27 +19,12 @@ html
 
 // override the image location.
 // +blueprint-debug("images/grid.png")
-=form-layout
-  +blueprint-form
-  label
-    +column(3)
-    margin: 0.5em 0
-    padding: 5px
-    text-align: right
-  input
-    &[type=password]
-      margin: 0.5em 0
-      padding: 5px
-  select
-    padding: 5px
-  .action
-    +prepend(3)
-
-form.inline
-  +blueprint-form
-  +blueprint-inline-form
-form
-  +form-layout
+form.formtastic
+  +formtastic
+  background-color: #cc9
+  border: 1px
+  padding: 5px
+  margin: 0px auto
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body

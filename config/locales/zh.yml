@@ -2,18 +2,44 @@ zh:
   activerecord:
     errors:
       template:
-        header : "保存失败，请修改如下输入信息"
-        body   : "以下输入信息有误"
+        header: "保存失败，请修改如下输入信息"
+        body:   "以下输入信息有误"
       messages:
         blank: "不能为空"
     models:
-      staff: "员工"
+      section:   "部门"
+      staff:     "员工"
+      issue:     "问题"
+      equipment: "电子设备"
+      purchase:  "采购"
     attributes:
       staff:
-        account         : "登录名"
-        name            : "中文名"
-        room            : "房间号"
-        phone           : "电话"
-        password        : '密码'
+        section:          "部门"
+        account:          "登录名"
+        name:             "中文名"
+        room:             "房间号"
+        phone:            "电话"
+        password:         '密码'
         password_confirm: "密码确认"
+      equipment:
+        code:     "编码"
+        category: "类别"
+        brand:    "品牌"
+        model:    "型号"
+        buy_date: "采购日期"
+        price:    "价格"
+      issue:
+        subject:     "主题"
+        description: "备注"
+        status:      "状态"
+        priority:    "优先级"
+        category:    "类别"
+        applicant:   "申请人"
+        author:      "提交人"
+        commit:      "确定"
+      purchase:
+        buy_date: "采购日期"
+        buyer:    "经办人"
+        supplier: "供应商"
+        comment:  "备注"
 

@@ -15,6 +15,8 @@ Rails::Initializer.run do |config|
   config.gem 'haml'
   config.gem 'chriseppstein-compass', :lib => 'compass'
   config.gem 'qoobaa-sqlite3-ruby', :lib => 'sqlite3'
+  config.gem 'justinfrench-formtastic', :lib => 'formtastic'
+  config.gem 'thoughtbot-clearance', :lib => 'clearance'
 
   # config.middleware.insert_before "ActionController::ParamsParser", "EncodingHack"
   config.middleware.insert_before "Rack::Lock", "EncodingHack"

@@ -1,28 +1,12 @@
--# FormBuilder存在encoding问题，如果不使用FormBuilder,就没有encoding问题。
--# 代替为%input{type="input", value=@staff.name}
-- form_for([@section, @staff]) do |f|
-  = f.error_messages
-  %div
-    = f.label "处室"
-    = f.collection_select :section_id, Section.all, :id, :name, {}
-  %div
-    = f.label "登录名"
-    = f.text_field :account
-  %div
-    = f.label "中文名"
-    = f.text_field :name
-  %div
-    = f.label "密码"
-    = f.password_field :password
-  %div
-    = f.label "确认密码"
-    = f.password_field :password_confirm
-  %div
-    = f.label "房间号"
-    = f.text_field :room
-  %div
-    = f.label "电话"
-    = f.text_field :phone
-  .action
-    = f.submit "保存"
-    = link_to "返回", sections_path
+- semantic_form_for [@section, @staff] do |f|
+  - f.inputs do
+    = f.input :section
+    = f.input :account
+    = f.input :name
+    = f.input :password
+    = f.input :password_confirm
+    = f.input :room, required: false
+    = f.input :phone, required: false
+  - f.buttons do
+    = f.commit_button "确定"
+

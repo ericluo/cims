@@ -1,18 +1,8 @@
-%h3 新增采购
-- form_for @purchase do |f|
-  %div
-    = f.label :buy_date, "采购日期"
-    = f.text_field :buy_date
-  %div
-    = f.label :buyer, "经办人"
-    = f.text_field :buyer
-  %div
-    = label :supplier, :name, "供货单位"
-    = collection_select(:supplier, :name, Supplier.all, :id, :name, {:prompt => "请选择供货单位"})
-    = link_to "添加供货单位", new_supplier_path
-  %div
-    = f.label :comment, "备注信息"
-    = f.text_area :comment, :rows => 5
-  .action
-    = f.submit "确定"
-    = link_to "返回", purchases_path
+- semantic_form_for @purchase do |f|
+  - f.inputs do
+    = f.input :buy_date, :as => :string
+    = f.input :buyer
+    = f.input :supplier, :hint => "如果供应商不存在，#{link_to '添加供应商', new_supplier_path}"
+    = f.input :comment
+  - f.buttons do
+    = f.commit_button "确定"

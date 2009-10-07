@@ -27,9 +27,10 @@ class IssuesController < ApplicationController
   # GET /issues/new.xml
   def new
     @issue = Issue.new
+    @title = "新建任务"
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render "issue" }
       format.xml  { render :xml => @issue }
     end
   end
@@ -37,6 +38,8 @@ class IssuesController < ApplicationController
   # GET /issues/1/edit
   def edit
     @issue = Issue.find(params[:id])
+    @title = "修改任务"
+    render "issue"
   end
 
   # POST /issues
