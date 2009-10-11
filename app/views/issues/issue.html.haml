@@ -1,5 +1,6 @@
+%h3= @issue.new_record? ? "增加任务" : "编辑任务"
 - semantic_form_for @issue do |f|
-  - f.inputs name: @title do
+  - f.inputs do
     = f.input :subject
     = f.input :description, required: false
     = f.input :category

@@ -27,7 +27,6 @@ class IssuesController < ApplicationController
   # GET /issues/new.xml
   def new
     @issue = Issue.new
-    @title = "新建任务"
 
     respond_to do |format|
       format.html { render "issue" }
@@ -38,7 +37,6 @@ class IssuesController < ApplicationController
   # GET /issues/1/edit
   def edit
     @issue = Issue.find(params[:id])
-    @title = "修改任务"
     render "issue"
   end
 
@@ -53,7 +51,7 @@ class IssuesController < ApplicationController
         format.html { redirect_to(issues_url) }
         format.xml  { render :xml => @issue, :status => :created, :location => @issue }
       else
-        format.html { render :action => "new" }
+        format.html { render "issue" }
         format.xml  { render :xml => @issue.errors, :status => :unprocessable_entity }
       end
     end
@@ -66,11 +64,11 @@ class IssuesController < ApplicationController
 
     respond_to do |format|
       if @issue.update_attributes(params[:issue])
-        flash[:notice] = 'Issue was successfully updated.'
+        flash[:notice] = '任务更新成功'
         format.html { redirect_to(issues_url) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render "issue" }
         format.xml  { render :xml => @issue.errors, :status => :unprocessable_entity }
       end
     end
