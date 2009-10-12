@@ -13,6 +13,12 @@
     = javascript_include_tag "application"
   %body.container
     #header
+      #signup
+        - if signed_in?
+          = link_to "注销", sign_out_path
+        - else
+          = link_to "登录", sign_in_path
+        = link_to "注册", sign_up_path
       %h1= @page_title || "湖北银监局信息科技综合服务平台"
       #myslidemenu.jqueryslidemenu
         %ul

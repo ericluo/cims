@@ -6,12 +6,18 @@ zh:
         body:   "以下输入信息有误"
       messages:
         blank: "不能为空"
+      models:
+        user:
+          attributes:
+            email:
+              taken: "该邮箱已注册"
     models:
       section:   "部门"
       staff:     "员工"
       issue:     "问题"
       equipment: "电子设备"
       purchase:  "采购"
+      user:      "用户"
     attributes:
       staff:
         section:          "部门"
@@ -21,6 +27,13 @@ zh:
         phone:            "电话"
         password:         '密码'
         password_confirm: "密码确认"
+      user:
+        name:                  "用户名"
+        email:                 "电子邮件"
+        password:              "密码"
+        password_confirmation: "密码确认"
+        room:                  "房间号"
+        phone:                 "电话"
       equipment:
         code:     "编码"
         category: "类别"

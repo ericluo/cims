@@ -33,3 +33,5 @@ Rails::Initializer.run do |config|
 end
 
 Haml::Template.options[:encoding] = "utf-8"
+HOST = "localhost"
+DO_NOT_REPLY = "eric.wenbl@gmail.com"

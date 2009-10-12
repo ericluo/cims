@@ -15,7 +15,13 @@ namespace :db do
     CIMS::Issue::CATEGORIES.each {|c| categories << Factory(:issue_category, name: c)}
     CIMS::Product::CATEGORIES.each {|c| Factory(:product_category, name: c)}
 
-    10.times { staffs << Factory(:staff) } 
-    5.times { Factory(:issue) }
+    4.times { staffs << Factory(:staff) } 
+    5.times { Factory(:issue, 
+                      applicant: staffs.rand,
+                      author:    staffs.rand,
+                      status:    statuses.rand,
+                      priority:  priorities.rand,
+                      category:  categories.rand
+                     )}
   end
 end
