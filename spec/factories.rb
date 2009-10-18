@@ -7,20 +7,16 @@ Factory.define :supplier do |f|
   f.phone "86"
 end
 
-Factory.define :issue_status do |f|
-  f.name CIMS::Issue::STATUSES.rand
-end
-
 Factory.define :issue_priority do |f|
-  f.name CIMS::Issue::PRIORITIES.rand
+  f.name CIMS::DICT[:issue_priority].rand
 end
 
 Factory.define :issue_category do |f|
-  f.name CIMS::Issue::CATEGORIES.rand
+  f.name CIMS::DICT[:issue_category].rand
 end
 
 Factory.define :product_category  do |f|
-  f.name CIMS::Product::CATEGORIES.rand
+  f.name CIMS::DICT[:product_category].rand
 end
 
 Factory.define :section do |f|
@@ -30,6 +26,13 @@ Factory.define :section do |f|
   f.sequence :priority do |n|
     n
   end
+end
+
+Factory.define :user do |f|
+  f.email "example@mail.com"
+  f.password "x32345"
+  f.room "310"
+  f.phone "5025"
 end
 
 Factory.define :staff do |f|
@@ -53,7 +56,6 @@ Factory.define :issue do |f|
 
   f.association :applicant, factory: :staff
   f.association :author, factory: :staff
-  f.association :status, factory: :issue_status
   f.association :priority, factory: :issue_priority
   f.association :category, factory: :issue_category
 end

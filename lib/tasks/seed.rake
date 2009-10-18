@@ -8,20 +8,7 @@ namespace :db do
 # 财务会计处 人事处 监察室 机关党委 机关服务中心 案件治理督导组 银行业协会 其他}.each_with_index do|n, i|
       # Section.create!(name: n, priority: i)
     # end
+    CIMS.bootstrap
 
-    statuses, priorities, categories, staffs = [],[],[],[]
-    CIMS::Issue::STATUSES.each {|s| statuses << Factory(:issue_status, name: s)}
-    CIMS::Issue::PRIORITIES.each {|p| priorities << Factory(:issue_priority, name: p)}
-    CIMS::Issue::CATEGORIES.each {|c| categories << Factory(:issue_category, name: c)}
-    CIMS::Product::CATEGORIES.each {|c| Factory(:product_category, name: c)}
-
-    4.times { staffs << Factory(:staff) } 
-    5.times { Factory(:issue, 
-                      applicant: staffs.rand,
-                      author:    staffs.rand,
-                      status:    statuses.rand,
-                      priority:  priorities.rand,
-                      category:  categories.rand
-                     )}
   end
 end

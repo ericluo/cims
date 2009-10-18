@@ -1,2 +1,2 @@
-default: --color --drb --port 8990 
+default: --no-color --drb --port 8990 
 html_report: --format progress --format html --out=features_report.html features

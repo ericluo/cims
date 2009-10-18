@@ -56,7 +56,7 @@ describe IssuesController do
       it "re-renders the 'new' template" do
         Issue.stub!(:new).and_return(mock_issue(:save => false))
         post :create, :issue => {}
-        response.should render_template('new')
+        response.should render_template('issue')
       end
     end
 
@@ -100,7 +100,7 @@ describe IssuesController do
       it "re-renders the 'edit' template" do
         Issue.stub!(:find).and_return(mock_issue(:update_attributes => false))
         put :update, :id => "1"
-        response.should render_template('edit')
+        response.should render_template('issue')
       end
     end
 

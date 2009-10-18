@@ -5,7 +5,10 @@ zh:
         header: "保存失败，请修改如下输入信息"
         body:   "以下输入信息有误"
       messages:
+        empty: "不能为空" 
         blank: "不能为空"
+        invalid: "无效"
+        confirmation: "不匹配"
       models:
         user:
           attributes:
@@ -28,6 +31,7 @@ zh:
         password:         '密码'
         password_confirm: "密码确认"
       user:
+        section:               "部门"
         name:                  "用户名"
         email:                 "电子邮件"
         password:              "密码"

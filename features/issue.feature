@@ -4,10 +4,8 @@ Feature: 问题管理与事件管理
   提交问题、查看提交问题状态、变更问题状态并对问题进行评论
 
   Background: 
-    Given a issue_category named "设备维修"
-      And a issue_priority named "high"
+    Given all meta data is populated
       And a staff named "罗文波"
-      And a issue_status named "new"
 
   Scenario: 提交问题
     Given I am on the new_issue page

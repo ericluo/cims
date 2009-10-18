@@ -17,7 +17,7 @@
         %td= issue.subject
         %td= issue.try(:applicant).try(:name)
         %td= issue.priority.name
-        %td= issue.status.name
+        %td= issue.status
         %td 
           = link_to '编辑', edit_issue_path(issue)
           = link_to '删除', issue, :confirm => '确定删除吗？', :method => :delete

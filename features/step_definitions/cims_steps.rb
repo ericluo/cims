@@ -2,6 +2,10 @@ Given /^a (.*) named "(.*)"$/ do |obj, name|
   Factory.create(obj, name: name)
 end
 
+Given /^all meta data is populated$/ do
+  CIMS.bootstrap
+end
+
 Given /^a purchase by "(.*)" on "(.*)" from "(.*)" with items$/ do |b, date, s, items|
   buyer = Staff.find_by_name(b)
   supplier = Supplier.find_by_name(s)

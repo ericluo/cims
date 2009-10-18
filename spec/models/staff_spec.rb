@@ -8,5 +8,4 @@ describe Staff do
     end.should raise_error(ActiveRecord::RecordInvalid)
   end
 
-
 end

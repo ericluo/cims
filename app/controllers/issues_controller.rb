@@ -43,17 +43,14 @@ class IssuesController < ApplicationController
   # POST /issues
   # POST /issues.xml
   def create
+    params.merge!(:applicanta_id => "1")
     @issue = Issue.new(params[:issue])
 
-    respond_to do |format|
-      if @issue.save
-        flash[:notice] = '任务新建成功'
-        format.html { redirect_to(issues_url) }
-        format.xml  { render :xml => @issue, :status => :created, :location => @issue }
-      else
-        format.html { render "issue" }
-        format.xml  { render :xml => @issue.errors, :status => :unprocessable_entity }
-      end
+    if @issue.save
+      flash[:notice] = '任务新建成功'
+      redirect_to(issues_url)
+    else
+      render "issue"
     end
   end
 

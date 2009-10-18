@@ -47,14 +47,10 @@ ActiveRecord::Schema.define(:version => 20091011105422) do
     t.string "name"
   end
 
-  create_table "issue_statuses", :force => true do |t|
-    t.string "name"
-  end
-
   create_table "issues", :force => true do |t|
     t.string   "subject"
     t.text     "description"
-    t.integer  "status_id"
+    t.string   "status"
     t.integer  "priority_id"
     t.integer  "category_id"
     t.integer  "author_id"
@@ -118,6 +114,7 @@ ActiveRecord::Schema.define(:version => 20091011105422) do
     t.integer  "priority"
     t.string   "room"
     t.string   "phone"
+    t.integer  "section_id"
     t.string   "email"
     t.string   "encrypted_password", :limit => 128
     t.string   "salt",               :limit => 128
