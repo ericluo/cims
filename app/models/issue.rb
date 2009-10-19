@@ -8,14 +8,15 @@ class Issue < ActiveRecord::Base
 
   belongs_to :priority, class_name: "IssuePriority"
   belongs_to :category, class_name: "IssueCategory"
-  belongs_to :applicant, class_name: "Staff"
-  belongs_to :author, class_name: "Staff"
+  belongs_to :applicant, class_name: "User"
+  belongs_to :author, class_name: "User"
 
   include ::AASM
   aasm_column :status
 
-  aasm_initial_state :new
 
+  attr_accessor :status
+  aasm_initial_state :new
   aasm_state :new
   aasm_state :assigned
   aasm_state :open
