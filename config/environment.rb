@@ -5,21 +5,15 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
+# RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # Specify gems that this application depends on. 
   # They can then be installed with "rake gems:install" on new installations.
-  config.gem 'haml'
-  config.gem 'chriseppstein-compass', :lib => 'compass'
-  config.gem 'qoobaa-sqlite3-ruby', :lib => 'sqlite3'
-  config.gem 'justinfrench-formtastic', :lib => 'formtastic'
-  config.gem 'thoughtbot-clearance', :lib => 'clearance'
-
   # config.middleware.insert_before "ActionController::ParamsParser", "EncodingHack"
-  config.middleware.insert_before "Rack::Lock", "EncodingHack"
+  # config.middleware.insert_before "Rack::Lock", "EncodingHack"
   config.time_zone = 'Beijing'
 
   # The internationalization framework can be changed to have another default locale (standard is :en) or more load paths.

@@ -19,14 +19,14 @@ Factory.define :product_category  do |f|
   f.sequence(:name) {|n| "product_category#{n}"}
 end
 
-# Factory.define :section do |f|
-#   f.sequence :name do |n| 
-#     "section#{n}"
-#   end
-#   f.sequence :priority do |n|
-#     n
-#   end
-# end
+Factory.define :section do |f|
+  f.sequence :name do |n| 
+    "section#{n}"
+  end
+  f.sequence :priority do |n|
+    n
+  end
+end
 
 Factory.define :user do |f|
   f.sequence(:email) {|n| "example#{n}@mail.com" }

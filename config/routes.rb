@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :issues
 
-  map.resources :staffs
+  map.resources :users
   map.resources :suppliers
-  map.resources :sections, :has_many => :staffs
+  map.resources :sections, :has_many => :users
   map.resources :categories
   map.resources :equipment, :has_many => :assignments, :singular => :equipment_instance
   map.resources :purchases, :has_many => :line_items

@@ -7,8 +7,8 @@ Spork.prefork do
   require 'spec/autorun'
   require 'spec/rails'
 
-  require File.dirname(__FILE__) + "/factories"
 
+  require File.dirname(__FILE__) + "/factories"
   Spec::Runner.configure do |config|
     # If you're not using ActiveRecord you should remove these
     # lines, delete config/database.yml and disable :active_record
@@ -53,7 +53,6 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-
 end
 
 # --- Instructions ---

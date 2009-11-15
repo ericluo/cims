@@ -12,7 +12,7 @@ EOF
 
 describe Haml do
   before :each do
-    @section = Factory.create(:section, name: '这里')
+    @section = Factory(:section, name: 'section1')
   end
 
   it "should render template with utf-8 encoding" do

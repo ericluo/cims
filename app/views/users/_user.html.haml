@@ -1,0 +1,8 @@
+%tr
+  %td= user.name
+  %td= user.account
+  %td= user.room
+  %td= user.phone
+  %td
+    = link_to "编辑", edit_section_user_path(user.section, user)
+    = link_to "删除",  section_user_path(user.section, user), :confirm => '确定吗?', :method => :delete
