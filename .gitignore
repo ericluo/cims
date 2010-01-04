@@ -8,4 +8,4 @@ doc/api
 doc/app
 doc/plugins
 vendor/**/*
-!vendor/bundler_gems/cache
+bin/*
