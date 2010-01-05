@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe UsersController do
 
-  it ""
+  it "" do 
+    
+  end
 
 end

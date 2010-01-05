@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+require 'factory_girl'
+
 Factory.define :supplier do |f|
   f.name "lenovo"
   f.boss "yang"
@@ -30,9 +32,16 @@ end
 
 Factory.define :user do |f|
   f.sequence(:email) {|n| "example#{n}@mail.com" }
-  f.password "x32345"
+  f.name "luowenbo"
   f.room "310"
   f.phone "5025"
+  f.priority "1"
+  f.association :section
+
+  f.encrypted_password "x32345"
+  f.remember_token "abcd"
+  f.confirmation_token "abcd"
+  f.salt "abcd"
 end
 
 Factory.define :issue do |f|
