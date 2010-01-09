@@ -9,8 +9,11 @@ gem "formtastic"
 gem "compass"
 gem "aasm"
 gem "haml"
-gem "sqlite3-ruby" # , "1.2.4", git: "git://github.com/qoobaa/sqlite3-ruby.git"
-# gem "sqlite3"
+# gem "sqlite3-ruby", "1.2.6", 
+#   :git => "git://github.com/qoobaa/sqlite3-ruby.git",
+#   :require_as => "sqlite3"
+
+gem "sqlite3-ruby"
 gem "test-unit", "1.2.3"
 gem "thin"
 
