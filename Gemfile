@@ -1,7 +1,4 @@
-clear_sources
-source "http://gemcutter.org"
-
-bundle_path "vendor/bundler_gems"
+source :gemcutter
 
 gem "rails", "2.3.5"
 gem "clearance"
@@ -17,7 +14,7 @@ gem "sqlite3-ruby"
 gem "test-unit", "1.2.3"
 gem "thin"
 
-only :test do 
+group :test do 
   gem "factory_girl"
   gem "cucumber"
   gem "cucumber-rails"
